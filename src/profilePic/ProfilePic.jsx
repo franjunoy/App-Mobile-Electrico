@@ -1,9 +1,9 @@
 import FotoDePerfil from '../assets/FotoDePerfil.png';
-import style from './ProfilePic.module.css';
+import { StyleSheet, Text, View } from 'react-native';
 
 const ProfilePic = () => {
   return (
-    <div>
+    <View>
       {
         <button className={style.button}>
           <img
@@ -13,7 +13,7 @@ const ProfilePic = () => {
           />
         </button>
       }
-    </div>
+    </View>
   );
 };
 

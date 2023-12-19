@@ -1,14 +1,14 @@
 import LogoElectrico from '../assets/LogoElectrico.png';
-import style from './Logo.module.css';
+import { StyleSheet, Text, View } from 'react-native';
 
 // eslint-disable-next-line react/prop-types
 const Logo = ({ toggleTaskBar }) => {
   return (
-    <div>
-      <button className={style.button} onClick={toggleTaskBar}>
+    <View>
+      <button onClick={toggleTaskBar}>
         <img src={LogoElectrico} alt='Logo Electrico' className={style.logo} />
       </button>
-    </div>
+    </View>
   );
 };
 
