@@ -3,6 +3,7 @@ import Nav from '../nav/Nav';
 import TaskBar from '../taskbar/TaskBar';
 import { Link } from 'react-router-dom';
 import { StyleSheet, Text, View } from 'react-native';
+import { Button } from 'react-native-web';
 
 const Home = () => {
   const [isTaskBarVisible, setIsTaskBarVisible] = useState(false);
@@ -19,7 +20,7 @@ const Home = () => {
         toggleVisibility={toggleTaskBarVisibility}
       />
       <Link to='/Calculator'>
-        <button>Calculadora</button>
+        <Button> title="Calculadora"</Button>
       </Link>
     </View>
   );
