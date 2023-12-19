@@ -1,0 +1,12 @@
+.button {
+  border: none;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.logo {
+  width: 70px; /* Cambia el ancho de la imagen */
+  height: auto;
+  align-items: center;
+}
