@@ -1,19 +1,33 @@
 import React from 'react';
-import { View, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 // eslint-disable-next-line react/prop-types
 const TaskBar = ({ isVisible, toggleVisibility }) => {
   return (
-    <View style={styles.row}>
+    <View style={styles.container}>
       {isVisible && (
         <>
-          <TouchableOpacity onPress={toggleVisibility}>X</TouchableOpacity>
-          <TouchableOpacity>Mi Factura</TouchableOpacity>
-          <TouchableOpacity>Mis Pagos</TouchableOpacity>
-          <TouchableOpacity>ChatBot</TouchableOpacity>
-          <TouchableOpacity>Reclamos</TouchableOpacity>
-          <TouchableOpacity>Preguntas Frecuentes</TouchableOpacity>
-          <TouchableOpacity>Salir</TouchableOpacity>
+          <TouchableOpacity onPress={toggleVisibility}>
+            <Text>X</Text>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Text>Mi Factura</Text>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Text>Mis Pagos</Text>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Text>ChatBot</Text>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Text>Reclamos</Text>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Text>Preguntas Frecuentes</Text>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Text>Salir</Text>
+          </TouchableOpacity>
         </>
       )}
     </View>
@@ -21,25 +35,11 @@ const TaskBar = ({ isVisible, toggleVisibility }) => {
 };
 
 const styles = StyleSheet.create({
-  taskbar: {
+  container: {
     width: 250,
-    height: '100%',
-    backgroundColor: '#333',
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    zIndex: 1000,
-    flexDirection: 'column',
-    paddingTop: 60
-  },
-  taskbarButton: {
-    borderWidth: 0, // No hay border: none en React Native, se usa borderWidth: 0
-    backgroundColor: 'transparent', // 'none' no es válido, 'transparent' se usa en lugar de 'none'
-    color: 'white',
-    padding: 10,
-    textAlign: 'left',
-    fontSize: 16,
-    cursor: 'pointer' // No hay 'cursor' en React Native
+    paddingLeft: 25,
+    top: -520,
+    backgroundColor: 'yellow'
   }
 });
 
