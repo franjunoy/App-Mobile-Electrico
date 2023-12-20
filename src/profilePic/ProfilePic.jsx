@@ -4,10 +4,12 @@ import { View, StyleSheet, TouchableOpacity, Image } from 'react-native';
 const ProfilePic = () => {
   return (
     <View>
-      <Image
-        source={require('../assets/FotoDePerfil.png')}
-        style={styles.image}
-      />
+      <TouchableOpacity>
+        <Image
+          source={require('../assets/FotoDePerfil.png')}
+          style={styles.image}
+        />
+      </TouchableOpacity>
     </View>
   );
 };
