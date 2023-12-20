@@ -1,27 +1,37 @@
-import ProfilePic from '../profilePic/ProfilePic';
+import React from 'react';
+import { View, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import Logo from '../logo/Logo';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import ProfilePic from '../profilePic/ProfilePic';
 
-// eslint-disable-next-line react/prop-types
 const Nav = ({ toggleTaskBar }) => {
   return (
-    <View>
-      <View>
+    <View style={styles.container}>
+      <View style={styles.row}>
         <Logo toggleTaskBar={toggleTaskBar} />
+        <View style={styles.spacer} />
+        <ProfilePic />
       </View>
-      <View>
-        <ProfilePic toggleTaskBar={toggleTaskBar} />
-      </View>
-      <StatusBar style='auto' />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     alignItems: 'center',
-    justifyContent: 'center'
+    top: 25
+  },
+  row: {
+    flexDirection: 'row',
+    paddingHorizontal: 20
+  },
+  image: {
+    width: 50,
+    height: 50,
+    borderRadius: 20
+  },
+  spacer: {
+    width: 250
   }
 });
 
