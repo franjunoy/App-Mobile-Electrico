@@ -1,20 +1,23 @@
-import FotoDePerfil from '../assets/FotoDePerfil.png';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { View, StyleSheet, TouchableOpacity, Image } from 'react-native';
 
 const ProfilePic = () => {
   return (
     <View>
-      {
-        <button className={style.button}>
-          <img
-            src={FotoDePerfil}
-            alt='Logo Perfil'
-            className={style.profilePic}
-          />
-        </button>
-      }
+      <Image
+        source={require('../assets/FotoDePerfil.png')}
+        style={styles.image}
+      />
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  image: {
+    width: 50,
+    height: 50,
+    borderRadius: 20
+  }
+});
 
 export default ProfilePic;
