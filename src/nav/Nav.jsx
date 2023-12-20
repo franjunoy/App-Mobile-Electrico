@@ -10,15 +10,16 @@ const Nav = ({ toggleTaskBar }) => {
     <GestureHandlerRootView>
       <SafeAreaProvider>
         <HeaderRNE
+          containerStyle={{ backgroundColor: '#FFD700' }}
           leftComponent={() => (
             <TouchableOpacity onPress={toggleTaskBar}>
-              <Icon name='menu' color='#fff' />
+              <Icon name='menu' color='#fff' size={30} />
             </TouchableOpacity>
           )}
           rightComponent={
             <View>
               <TouchableOpacity>
-                <Icon name='photo' color='white' />
+                <Icon name='photo' color='white' size={28} />
               </TouchableOpacity>
             </View>
           }
