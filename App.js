@@ -5,17 +5,21 @@ import Home from './src/home/Home';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Home />
       <StatusBar style='auto' />
+      <Home />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
+    flex: 'center',
     alignItems: 'center',
-    justifyContent: 'center'
+    width: 375,
+    height: 667,
+    backgroundColor: 'white',
+    borderColor: 'black',
+    borderWidth: 2,
+    borderRadius: 20
   }
 });
