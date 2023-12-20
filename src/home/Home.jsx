@@ -1,21 +1,18 @@
 import { useState } from 'react';
-import Nav from '../nav/Nav';
-import TaskBar from '../taskbar/TaskBar';
+import Head from '../head/Head';
+import Menu from '../menu/Menu';
 import { StyleSheet, Text, View } from 'react-native';
 
 const Home = () => {
-  const [isTaskBarVisible, setIsTaskBarVisible] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const toggleTaskBarVisibility = () => {
-    setIsTaskBarVisible(!isTaskBarVisible);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
   };
   return (
     <View>
-      <Nav toggleTaskBar={toggleTaskBarVisibility} />
-      <TaskBar
-        isVisible={isTaskBarVisible}
-        toggleVisibility={toggleTaskBarVisibility}
-      />
+      <Head toggleMenu={toggleMenu} />
+      <Menu isOpen={isOpen} toggleMenu={toggleMenu} />
     </View>
   );
 };
