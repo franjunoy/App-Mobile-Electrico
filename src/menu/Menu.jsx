@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     width: 250,
     paddingLeft: 25,
     top: -520,
-    backgroundColor: 'yellow'
+    backgroundColor: '#FFEB81'
   }
 });
 

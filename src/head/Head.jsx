@@ -1,59 +1,16 @@
 import React from 'react';
-import {
-  StyleSheet,
-  View,
-  Text,
-  Linking,
-  StyleProp,
-  TextStyle,
-  ViewStyle,
-  TouchableOpacity
-} from 'react-native';
-import { Header as HeaderRNE, HeaderProps, Icon } from '@rneui/themed';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { StyleSheet, View, Text } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 
 const Head = ({ toggleMenu }) => {
   return (
-    <SafeAreaProvider>
-      <HeaderRNE
-        leftComponent={{
-          icon: 'menu',
-          color: '#fff'
-        }}
-        rightComponent={
-          <View style={styles.headerRight}>
-            <Icon name='image' color='white' />
-          </View>
-        }
-      />
-    </SafeAreaProvider>
+    <View>
+      <Text>Hola mundo</Text>
+      <StatusBar style='auto' />
+    </View>
   );
 };
 
-const styles = StyleSheet.create({
-  headerContainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#397af8',
-    marginBottom: 20,
-    width: '100%',
-    paddingVertical: 15
-  },
-  heading: {
-    color: 'white',
-    fontSize: 22,
-    fontWeight: 'bold'
-  },
-  headerRight: {
-    display: 'flex',
-    flexDirection: 'row',
-    marginTop: 5
-  },
-  subheaderText: {
-    color: 'white',
-    fontSize: 16,
-    fontWeight: 'bold'
-  }
-});
+const styles = StyleSheet.create({});
 
 export default Head;
