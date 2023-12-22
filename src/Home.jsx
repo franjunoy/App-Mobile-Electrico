@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { View } from 'react-native';
+import { View, ScrollView } from 'react-native';
 import Header from './Header';
 import Notificaciones from './Notificaciones';
 import MisConsumos from './MisConsumos';
@@ -14,9 +14,11 @@ const Home = () => {
   return (
     <View>
       <Header toggleMenu={toggleMenu} />
-      <Notificaciones />
-      <MisConsumos />
-      <FacturaElectronica />
+      <ScrollView>
+        <Notificaciones />
+        <MisConsumos />
+        <FacturaElectronica />
+      </ScrollView>
     </View>
     // <Menu isOpen={isOpen} toggleMenu={toggleMenu} />
   );
