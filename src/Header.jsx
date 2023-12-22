@@ -13,14 +13,14 @@ const Header = (toggleMenu) => {
         leftComponent={
           <View style={styles.menu}>
             <TouchableOpacity onPress={toggleMenu}>
-              <Icon name='menu' color='white' size={30} />
+              <Icon name='menu' color='black' size={30} />
             </TouchableOpacity>
           </View>
         }
         rightComponent={
           <View style={styles.person}>
             <TouchableOpacity>
-              <Icon name='person' color='white' size={30} />
+              <Icon name='person' color='black' size={30} />
             </TouchableOpacity>
           </View>
         }
