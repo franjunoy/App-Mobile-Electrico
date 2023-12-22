@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { View } from 'react-native';
 import Header from './Header';
+import Notificaciones from './Notificaciones';
 import MisConsumos from './MisConsumos';
 import FacturaElectronica from './FacturaElectronica';
 
@@ -13,6 +14,7 @@ const Home = () => {
   return (
     <View>
       <Header toggleMenu={toggleMenu} />
+      <Notificaciones />
       <MisConsumos />
       <FacturaElectronica />
     </View>
