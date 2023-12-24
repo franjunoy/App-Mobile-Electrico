@@ -9,23 +9,21 @@ const FacturaElectronica = () => {
       <Button
         buttonStyle={{
           backgroundColor: '#FFE457',
-          borderRadius: 5,
-          height: 70
-        }}
-        containerStyle={{
-          width: 250,
+          borderRadius: 10,
+          height: 80,
+          width: 305,
           marginHorizontal: 50,
           marginVertical: 10
         }}
       >
         <View style={styles.view}>
-          <Icon name='receipt' size={40} color='black' marginRight={13} />
+          <Icon name='receipt' size={40} color='black' marginRight={20} />
           <View style={styles.viewText}>
             <Text style={styles.text}>Factura </Text>
             <Text style={styles.text}>electronica</Text>
           </View>
         </View>
-        <Icon name='chevron-right' size={25} color='black' marginLeft={30} />
+        <Icon name='chevron-right' size={25} color='black' marginLeft={40} />
       </Button>
     </View>
   );
