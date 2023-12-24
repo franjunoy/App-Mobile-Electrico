@@ -9,20 +9,19 @@ const MisConsumos = () => {
       <Button
         buttonStyle={{
           backgroundColor: '#FFE457',
-          borderRadius: 5,
-          height: 70
-        }}
-        containerStyle={{
-          width: 250,
+          borderRadius: 10,
+          height: 80,
+          width: 305,
           marginHorizontal: 50,
           marginVertical: 10
         }}
+        containerStyle={{}}
       >
         <View style={styles.view}>
-          <Icon name='plug' size={40} color='black' marginRight={10} />
+          <Icon name='plug' size={40} color='black' marginRight={20} />
           <Text style={styles.text}>Mis consumos</Text>
         </View>
-        <Icon name='chevron-right' size={25} color='black' marginLeft={25} />
+        <Icon name='chevron-right' size={25} color='black' marginLeft={40} />
       </Button>
     </View>
   );
