@@ -12,19 +12,24 @@ const FacturaElectronica = () => {
           borderRadius: 5,
           borderColor: 'black',
           borderWidth: 1,
-          height: 70
+          height: 90,
+          width: 90,
+          marginRight: 15
         }}
-        containerStyle={{
-          width: 100,
-          marginHorizontal: 50,
-          marginVertical: 10
-        }}
+        containerStyle={{}}
       >
         <View style={styles.view}>
-          <Icon name='tachometer-alt' size={20} color='black' padding={5} />
+          <Icon
+            name='tachometer-alt'
+            size={20}
+            color='black'
+            padding={5}
+            justifyContent='center'
+            alignItems='center'
+          />
           <View style={styles.viewText}>
-            <Text style={styles.text}>Simulador </Text>
-            <Text style={styles.text}>de Consumo</Text>
+            <Text style={styles.text}>Simulador de</Text>
+            <Text style={styles.text}>Consumo</Text>
           </View>
         </View>
       </Button>
@@ -34,27 +39,28 @@ const FacturaElectronica = () => {
 
 const styles = StyleSheet.create({
   buttonsContainer: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
     justifyContent: 'center',
-    alignItems: 'center',
-    width: '100%',
-    marginVertical: 20
+    alignItems: 'center'
   },
   view: {
     flexDirection: 'colum',
+    justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#FFE457',
-    borderRadius: 100
+    width: 77, // Cambia este valor para ajustar el tamaño del círculo
+    height: 77, // Mismo valor que el width para hacerlo un círculo perfecto
+    borderRadius: 50
   },
   viewText: {
     alignItems: 'center',
-    marginRight: 30
+    justifyContent: 'center',
+    flexDirection: 'colum'
   },
   text: {
+    justifyContent: 'center',
     alignItems: 'center',
     fontFamily: 'Helvetica-Bold',
-    fontSize: 12
+    fontSize: 9
   }
 });
 
