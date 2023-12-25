@@ -16,7 +16,6 @@ const SimuladorDeConsumo = () => {
           width: 90,
           marginRight: 15
         }}
-        containerStyle={{}}
       >
         <View flexDirection='colum' justifyContent='center' alignItems='center'>
           <View style={styles.view}>
