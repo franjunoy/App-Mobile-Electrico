@@ -8,8 +8,10 @@ const FacturaElectronica = () => {
     <View style={styles.buttonsContainer}>
       <Button
         buttonStyle={{
-          backgroundColor: '#FFE457',
+          backgroundColor: '#FFEB81',
           borderRadius: 10,
+          borderWidth: 1,
+          borderColor: '#d9d9d9',
           height: 80,
           width: 305,
           marginHorizontal: 50,
