@@ -15,7 +15,6 @@ const FacturaElectronica = () => {
           height: 90,
           width: 90
         }}
-        containerStyle={{}}
       >
         <View flexDirection='colum'>
           <View style={styles.view}>
