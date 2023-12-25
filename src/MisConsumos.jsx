@@ -14,8 +14,7 @@ const MisConsumos = () => {
           borderColor: '#d9d9d9',
           height: 80,
           width: 305,
-          marginHorizontal: 50,
-          marginVertical: 10
+          marginHorizontal: 50
         }}
         containerStyle={{}}
       >
@@ -36,14 +35,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
-    marginVertical: 20
+    marginVertical: 10
   },
   view: {
     flexDirection: 'row',
     alignItems: 'center'
   },
   text: {
-    marginLeft: 0,
     marginRight: 10,
     fontFamily: 'Helvetica-Bold',
     fontSize: 18
