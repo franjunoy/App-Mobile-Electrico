@@ -16,7 +16,7 @@ const PaginaWeb = () => {
   return (
     <View style={styles.container}>
       <View style={styles.view}>
-        <Icon name='link' size={40} color='black' marginRight={18} />
+        <Icon name='link' size={40} color='black' marginRight={16} />
         <View style={styles.viewText}>
           <Text style={styles.text}>Visita nuestra página web</Text>
           <TouchableOpacity onPress={abrirPaginaWeb}>
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginVertical: 20,
+    marginVertical: 25,
     backgroundColor: '#FFEB81',
     borderRadius: 10,
     borderWidth: 1,
