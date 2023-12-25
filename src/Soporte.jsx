@@ -10,22 +10,24 @@ const FacturaElectronica = () => {
         buttonStyle={{
           backgroundColor: 'transparet',
           borderRadius: 5,
-          borderColor: 'black',
+          borderColor: '#d9d9d9',
           borderWidth: 1,
           height: 90,
           width: 90
         }}
         containerStyle={{}}
       >
-        <View style={styles.view}>
-          <Icon
-            name='headset'
-            size={20}
-            color='black'
-            padding={5}
-            justifyContent='center'
-            alignItems='center'
-          />
+        <View flexDirection='colum'>
+          <View style={styles.view}>
+            <Icon
+              name='headset'
+              size={20}
+              color='black'
+              padding={5}
+              justifyContent='center'
+              alignItems='center'
+            />
+          </View>
           <View style={styles.viewText}>
             <Text style={styles.text}>Soporte</Text>
             <Text style={styles.text}>Tecnico</Text>
@@ -42,12 +44,11 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   view: {
-    flexDirection: 'colum',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#FFE457',
-    width: 77, // Cambia este valor para ajustar el tamaño del círculo
-    height: 77, // Mismo valor que el width para hacerlo un círculo perfecto
+    backgroundColor: '#FFEB81',
+    width: 50,
+    height: 50,
     borderRadius: 50
   },
   viewText: {
