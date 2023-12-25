@@ -16,12 +16,11 @@ const FacturaElectronica = () => {
           width: 90,
           marginRight: 15
         }}
-        containerStyle={{}}
       >
         <View flexDirection='colum'>
           <View style={styles.view}>
             <Icon
-              name='map'
+              name='map-marked-alt'
               size={20}
               color='black'
               padding={5}
@@ -48,8 +47,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#FFEB81',
-    width: 50, // Cambia este valor para ajustar el tamaño del círculo
-    height: 50, // Mismo valor que el width para hacerlo un círculo perfecto
+    width: 50,
+    height: 50,
     borderRadius: 50
   },
   viewText: {
