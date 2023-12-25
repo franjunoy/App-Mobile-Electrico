@@ -14,8 +14,7 @@ const FacturaElectronica = () => {
           borderColor: '#d9d9d9',
           height: 80,
           width: 305,
-          marginHorizontal: 50,
-          marginVertical: 10
+          marginHorizontal: 50
         }}
       >
         <View style={styles.view}>
@@ -38,7 +37,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
-    marginVertical: 20
+    marginVertical: 10
   },
   view: {
     flexDirection: 'row',
