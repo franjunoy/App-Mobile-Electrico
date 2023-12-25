@@ -4,7 +4,7 @@ import Header from './Header';
 import Notificaciones from './Notificaciones';
 import MisConsumos from './MisConsumos';
 import FacturaElectronica from './FacturaElectronica';
-import Calculadora from './Calculadora';
+import SimuladorDeConsumo from './SimuladorDeConsumo';
 import Mapa from './Mapa';
 import Soporte from './Soporte';
 
@@ -28,7 +28,7 @@ const Home = () => {
             width: 300
           }}
         >
-          <Calculadora />
+          <SimuladorDeConsumo />
           <Mapa />
           <Soporte />
         </View>
