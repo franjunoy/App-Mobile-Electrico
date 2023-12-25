@@ -7,6 +7,7 @@ import FacturaElectronica from './FacturaElectronica';
 import SimuladorDeConsumo from './SimuladorDeConsumo';
 import Mapa from './Mapa';
 import Soporte from './Soporte';
+import PaginaWeb from './PaginaWeb';
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +17,9 @@ const Home = () => {
   };
   return (
     <View height='100%' width='100%'>
-      <Header toggleMenu={toggleMenu} />
+      <View style={{ paddingBottom: 10 }}>
+        <Header toggleMenu={toggleMenu} />
+      </View>
       <ScrollView>
         <Notificaciones />
         <MisConsumos />
@@ -25,13 +28,15 @@ const Home = () => {
           style={{
             flexDirection: 'row',
             marginHorizontal: 38,
-            width: 300
+            width: 305,
+            marginVertical: 10
           }}
         >
           <SimuladorDeConsumo />
           <Mapa />
           <Soporte />
         </View>
+        <PaginaWeb />
       </ScrollView>
     </View>
     // <Menu isOpen={isOpen} toggleMenu={toggleMenu} />
