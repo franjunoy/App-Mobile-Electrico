@@ -27,7 +27,7 @@ const Header = (toggleMenu) => {
           </View>
         }
         containerStyle={{
-          backgroundColor: '#FFE457',
+          backgroundColor: '#FFEB81',
           height: 70,
           flexDirection: 'row',
           alignItems: 'center'
