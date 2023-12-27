@@ -19,7 +19,6 @@ const Menu = () => {
         <Text>Informacion</Text>
         <Icon name='cog' color='black' />
         <Text>Opciones</Text>
-
         <Icon name='home' color='black' />
         <Text>Salir</Text>
       </ListItem>
