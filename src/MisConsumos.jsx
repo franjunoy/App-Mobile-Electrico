@@ -16,7 +16,6 @@ const MisConsumos = () => {
           width: 305,
           marginHorizontal: 50
         }}
-        containerStyle={{}}
       >
         <View style={styles.view}>
           <Icon name='plug' size={40} color='black' marginRight={20} />
