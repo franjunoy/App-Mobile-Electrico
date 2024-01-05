@@ -8,6 +8,7 @@ import SimuladorDeConsumo from './SimuladorDeConsumo';
 import Mapa from './Mapa';
 import Soporte from './Soporte';
 import PaginaWeb from './PaginaWeb';
+import Menu from './Menu';
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,6 +18,7 @@ const Home = () => {
   };
   return (
     <View height='100%' width='100%'>
+      <Menu isOpen={isOpen} toggleMenu={toggleMenu} />
       <View style={{ paddingBottom: 10 }}>
         <Header toggleMenu={toggleMenu} />
       </View>
@@ -39,7 +41,6 @@ const Home = () => {
         <PaginaWeb />
       </ScrollView>
     </View>
-    // <Menu isOpen={isOpen} toggleMenu={toggleMenu} />
   );
 };
 
