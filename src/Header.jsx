@@ -7,7 +7,7 @@ import {
 } from 'react-native-gesture-handler';
 import Logo from '../assets/Logo.png';
 
-const Header = (toggleMenu) => {
+const Header = ({ toggleMenu }) => {
   return (
     <GestureHandlerRootView>
       <HeaderRNE
