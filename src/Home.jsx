@@ -7,6 +7,7 @@ import SimuladorDeConsumo from './SimuladorDeConsumo';
 import Mapa from './Mapa';
 import Soporte from './Soporte';
 import PaginaWeb from './PaginaWeb';
+import Reader from './Reader';
 
 const Home = ({ toggleMenu }) => {
   return (
@@ -16,6 +17,7 @@ const Home = ({ toggleMenu }) => {
       </View>
       <ScrollView>
         <Notificaciones />
+        <Reader />
         <MisConsumos />
         <FacturaElectronica />
         <View
