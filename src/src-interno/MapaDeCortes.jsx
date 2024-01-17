@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View, Text } from 'react-native';
 
-const MisConsumos = () => {
+const MapaDeCortes = () => {
   return (
     <View style={styles.container}>
       <Text>Mapa de Corte</Text>
@@ -12,4 +12,4 @@ const MisConsumos = () => {
 
 const styles = StyleSheet.create({});
 
-export default MisConsumos;
+export default MapaDeCortes;
