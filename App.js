@@ -1,37 +1,34 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-import { Route, Switch } from 'react-router-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Main from './src/Main';
 import MisConsumos from './src/src-interno/MisConsumos';
 import MapaDeCortes from './src/src-interno/MapaDeCortes';
-
+import Calculadora from './src/src-interno/Calculadora';
+import PagarFactura from './src/src-interno/PagarFactura';
+import ScannerQr from './src/src-interno/ScannerQr';
+import Soporte from './src/src-interno/Soporte';
 export default function App() {
+  const Stack = createNativeStackNavigator();
   return (
-    <View style={styles.container}>
-      <Switch>
-        <Route path='/' exact>
-          <Main />
-        </Route>
-        <Route path='/misconsumos' exact>
-          <MisConsumos />
-        </Route>
-        <Route path='/factura' exact>
-          <Text>Veras tu factura</Text>
-        </Route>
-        <Route path='/calculadora' exact>
-          <Text>Aca va la calculadora</Text>
-        </Route>
-        <Route path='/mapa' exact>
-          <MapaDeCortes />
-        </Route>
-        <Route path='/soporte' exact>
-          <Text>Ayuda o soporte</Text>
-        </Route>
-      </Switch>
-
-      <StatusBar style='auto' />
-    </View>
+    <NavigationContainer style={styles.container}>
+      <Stack.Navigator initialRouteName='Main'>
+        <Stack.Screen
+          name='Main'
+          component={Main}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen name='MisConsumos' component={MisConsumos} />
+        <Stack.Screen name='MapaDeCortes' component={MapaDeCortes} />
+        <Stack.Screen name='ScannerQr' component={ScannerQr} />
+        <Stack.Screen name='PagarFactura' component={PagarFactura} />
+        <Stack.Screen name='Calculadora' component={Calculadora} />
+        <Stack.Screen name='Soporte' component={Soporte} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
