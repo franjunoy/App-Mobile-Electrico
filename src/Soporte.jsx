@@ -2,8 +2,11 @@ import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 import { Button } from '@rneui/themed';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import { useNavigation } from '@react-navigation/native';
 
 const FacturaElectronica = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.buttonsContainer}>
       <Button
@@ -15,6 +18,7 @@ const FacturaElectronica = () => {
           height: 90,
           width: 90
         }}
+        onPress={() => navigation.navigate('Soporte')}
       >
         <View flexDirection='colum'>
           <View style={styles.view}>
