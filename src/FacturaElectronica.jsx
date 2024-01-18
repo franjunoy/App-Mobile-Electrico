@@ -2,8 +2,10 @@ import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 import { Button } from '@rneui/themed';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import { useNavigation } from '@react-navigation/native';
 
 const FacturaElectronica = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.buttonsContainer}>
       <Button
@@ -16,6 +18,7 @@ const FacturaElectronica = () => {
           width: 305,
           marginHorizontal: 50
         }}
+        onPress={() => navigation.navigate('PagarFactura')}
       >
         <View style={styles.view}>
           <Icon name='receipt' size={40} color='black' marginRight={20} />
