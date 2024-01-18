@@ -6,6 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 
 const Reader = () => {
   const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
       <Button
