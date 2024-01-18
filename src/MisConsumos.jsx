@@ -2,8 +2,11 @@ import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 import { Button } from '@rneui/themed';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import { useNavigation } from '@react-navigation/native';
 
 const MisConsumos = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.buttonsContainer}>
       <Button
@@ -16,6 +19,7 @@ const MisConsumos = () => {
           width: 305,
           marginHorizontal: 50
         }}
+        onPress={() => navigation.navigate('MisConsumos')}
       >
         <View style={styles.view}>
           <Icon name='plug' size={40} color='black' marginRight={20} />
