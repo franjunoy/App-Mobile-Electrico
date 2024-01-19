@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Text, View, StyleSheet, Button } from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 
-const ScannerQr = () => {
+const ScannerQr = ({ qrDataArray = [] }) => {
   const [hasPermission, setHasPermission] = useState(null);
   const [scanned, setScanned] = useState(false);
   const [data, setData] = useState('');
@@ -17,7 +17,15 @@ const ScannerQr = () => {
   const handleBarCodeScanned = ({ type, data }) => {
     setScanned(true);
     setData(data);
-    alert(`Código ${type}: ${data}`);
+
+    const qrCodeExists = qrDataArray.some((qrCode) => qrCode.codigo === data);
+    console.log(qrCodeExists);
+
+    if (qrCodeExists) {
+      alert(`¡Código QR encontrado!`);
+    } else {
+      alert(`Código invalido`);
+    }
   };
 
   if (hasPermission === null) {
