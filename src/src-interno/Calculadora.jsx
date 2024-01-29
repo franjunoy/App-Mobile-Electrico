@@ -1,19 +1,56 @@
 import { StyleSheet, View, Text } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 const Calculadora = () => {
   const buttonsData = [
-    'Botón 1',
-    'Botón 2',
-    'Botón 3',
-    'Botón 4',
-    'Botón 5',
-    'Botón 6',
-    'Botón 7',
-    'Botón 8',
-    'Botón 9',
-    'Botón 10',
-    'Botón 11',
-    'Botón 12'
+    <Icon
+      name='desktop'
+      size={10}
+      color='black'
+      justifyContent='center'
+      alignItems='center'
+    />,
+    <Icon
+      name='laptop'
+      size={10}
+      color='black'
+      justifyContent='center'
+      alignItems='center'
+    />,
+    <Icon
+      name='map-marked-alt'
+      size={10}
+      color='black'
+      justifyContent='center'
+      alignItems='center'
+    />,
+    <Icon
+      name='map-marked-alt'
+      size={10}
+      color='black'
+      justifyContent='center'
+      alignItems='center'
+    />,
+    <Icon
+      name='map-marked-alt'
+      size={10}
+      color='black'
+      justifyContent='center'
+      alignItems='center'
+    />,
+    <Icon
+      name='map-marked-alt'
+      size={10}
+      color='black'
+      justifyContent='center'
+      alignItems='center'
+    />,
+    <Icon name='map-marked-alt' size={10} color='black' />,
+    <Icon name='map-marked-alt' size={10} color='black' />,
+    <Icon name='map-marked-alt' size={10} color='black' />,
+    <Icon name='map-marked-alt' size={10} color='black' />,
+    <Icon name='map-marked-alt' size={10} color='black' />,
+    <Icon name='map-marked-alt' size={10} color='black' />
   ];
 
   return (
