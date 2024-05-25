@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 const Calculadora = () => {
   const buttonsData = [
     <Icon
-      name='desktop '
+      name='desktop'
       size={10}
       color='black'
       justifyContent='center'

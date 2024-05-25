@@ -42,7 +42,10 @@ const ScannerQr = ({ qrDataArray = [] }) => {
         style={StyleSheet.absoluteFillObject}
       />
       {scanned && (
-        <Button title={'Escanear de nuevo'} onPress={() => setScanned(false)} />
+        <Button
+          title={'Escanear de nuevo '}
+          onPress={() => setScanned(false)}
+        />
       )}
     </View>
   );
