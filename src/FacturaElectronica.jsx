@@ -21,7 +21,7 @@ const FacturaElectronica = () => {
         onPress={() => navigation.navigate('PagarFactura')}
       >
         <View style={styles.view}>
-          <Icon name='receipt' size={40} color='black ' marginRight={20} />
+          <Icon name='receipt' size={40} color='black' marginRight={20} />
           <View style={styles.viewText}>
             <Text style={styles.text}>Factura </Text>
             <Text style={styles.text}>electronica</Text>
