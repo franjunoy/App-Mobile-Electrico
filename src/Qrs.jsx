@@ -8,7 +8,7 @@ const Qrs = () => {
       codigo: 'Texto2',
       isValid: true
     },
-    { codigo: 'Texto3', isValid: true }
+    { codigo: 'Texto3 ', isValid: true }
   ];
 
   return <ScannerQr qrDataArray={qrDataArray} />;
