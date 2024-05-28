@@ -7,7 +7,7 @@ const Calculadora = () => {
       name='desktop'
       size={10}
       color='black'
-      justifyContent='center '
+      justifyContent='center'
       alignItems='center'
     />,
     <Icon
