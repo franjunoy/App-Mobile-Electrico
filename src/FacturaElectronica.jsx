@@ -18,7 +18,7 @@ const FacturaElectronica = () => {
           width: 305,
           marginHorizontal: 50
         }}
-        onPress={() => navigation.navigate('PagarFactura ')}
+        onPress={() => navigation.navigate('PagarFactura-')}
       >
         <View style={styles.view}>
           <Icon name='receipt' size={40} color='black' marginRight={20} />
