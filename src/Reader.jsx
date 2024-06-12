@@ -29,7 +29,6 @@ const styles = StyleSheet.create({
 
   text: {
     marginRight: 250,
-    fontFamily: 'Helvetica-Bold',
     fontSize: 20
   }
 });
