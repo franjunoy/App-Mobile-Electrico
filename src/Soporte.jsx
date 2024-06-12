@@ -62,7 +62,6 @@ const styles = StyleSheet.create({
   text: {
     justifyContent: 'center',
     alignItems: 'center',
-    fontFamily: 'Helvetica-Bold',
     fontSize: 9
   }
 });
