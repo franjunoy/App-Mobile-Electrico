@@ -52,7 +52,6 @@ const styles = StyleSheet.create({
     marginRight: 10
   },
   text: {
-    fontFamily: 'Helvetica-Bold',
     fontSize: 15,
     marginBottom: 8
   },
