@@ -53,8 +53,6 @@ const styles = StyleSheet.create({
   },
   text: {
     marginLeft: 0,
-
-    fontFamily: 'Helvetica-Bold',
     fontSize: 18
   }
 });
