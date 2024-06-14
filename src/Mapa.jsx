@@ -8,21 +8,10 @@ const FacturaElectronica = () => {
   const navigation = useNavigation();
 
   return (
-    <View style={styles.buttonsContainer}>
-      <Button
-        buttonStyle={{
-          backgroundColor: 'transparet',
-          borderRadius: 5,
-          borderColor: '#d9d9d9',
-          borderWidth: 1,
-          height: 90,
-          width: 90,
-          marginRight: 15
-        }}
-        onPress={() => navigation.navigate('MapaDeCortes')}
-      >
-        <View flexDirection='colum'>
-          <View style={styles.view}>
+    <View>
+      <Button onPress={() => navigation.navigate('MapaDeCortes')}>
+        <View>
+          <View>
             <Icon
               name='map-marked-alt'
               size={20}
@@ -32,40 +21,14 @@ const FacturaElectronica = () => {
               alignItems='center'
             />
           </View>
-          <View style={styles.viewText}>
-            <Text style={styles.text}>Mapa de</Text>
-            <Text style={styles.text}>Cortes</Text>
+          <View>
+            <Text>Mapa de</Text>
+            <Text>Cortes</Text>
           </View>
         </View>
       </Button>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  buttonsContainer: {
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  view: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#FFEB81',
-    width: 50,
-    height: 50,
-    borderRadius: 50
-  },
-  viewText: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'colum'
-  },
-  text: {
-    justifyContent: 'center',
-    alignItems: 'center',
-
-    fontSize: 9
-  }
-});
 
 export default FacturaElectronica;
