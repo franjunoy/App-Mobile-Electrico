@@ -8,20 +8,10 @@ const FacturaElectronica = () => {
   const navigation = useNavigation();
 
   return (
-    <View style={styles.buttonsContainer}>
-      <Button
-        buttonStyle={{
-          backgroundColor: 'transparet',
-          borderRadius: 5,
-          borderColor: '#d9d9d9',
-          borderWidth: 1,
-          height: 90,
-          width: 90
-        }}
-        onPress={() => navigation.navigate('Soporte')}
-      >
+    <View>
+      <Button onPress={() => navigation.navigate('Soporte')}>
         <View flexDirection='colum'>
-          <View style={styles.view}>
+          <View>
             <Icon
               name='headset'
               size={20}
@@ -31,39 +21,14 @@ const FacturaElectronica = () => {
               alignItems='center'
             />
           </View>
-          <View style={styles.viewText}>
-            <Text style={styles.text}>Soporte</Text>
-            <Text style={styles.text}>Tecnico</Text>
+          <View>
+            <Text>Soporte</Text>
+            <Text>Tecnico</Text>
           </View>
         </View>
       </Button>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  buttonsContainer: {
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  view: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#FFEB81',
-    width: 50,
-    height: 50,
-    borderRadius: 50
-  },
-  viewText: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'colum'
-  },
-  text: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    fontSize: 9
-  }
-});
 
 export default FacturaElectronica;
