@@ -36,7 +36,7 @@ const ScannerQr = ({ qrDataArray = [] }) => {
   }
 
   return (
-    <View style={styles.container}>
+    <View>
       <BarCodeScanner
         onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
         style={StyleSheet.absoluteFillObject}
@@ -47,13 +47,5 @@ const ScannerQr = ({ qrDataArray = [] }) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'flex-end'
-  }
-});
 
 export default ScannerQr;
