@@ -3,13 +3,10 @@ import { StyleSheet, View, Text } from 'react-native';
 
 const MisConsumos = () => {
   return (
-    <View style={styles.container}>
+    <View>
       <Text>Cuanto llevas consumiendo</Text>
-      <StatusBar style='auto' />
     </View>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default MisConsumos;
