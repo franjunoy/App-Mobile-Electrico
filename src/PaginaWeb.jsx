@@ -14,52 +14,18 @@ const PaginaWeb = () => {
     Linking.openURL(url);
   };
   return (
-    <View style={styles.container}>
-      <View style={styles.view}>
+    <View>
+      <View>
         <Icon name='link' size={40} color='black' marginRight={16} />
-        <View style={styles.viewText}>
-          <Text style={styles.text}>Visita nuestra página web</Text>
+        <View>
+          <Text>Visita nuestra página web</Text>
           <TouchableOpacity onPress={abrirPaginaWeb}>
-            <Text style={styles.link}>https://www.celp.com.ar/</Text>
+            <Text>https://www.celp.com.ar/</Text>
           </TouchableOpacity>
         </View>
       </View>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginVertical: 25,
-    backgroundColor: '#FFEB81',
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: '#d9d9d9',
-    height: 85,
-    width: 305,
-    marginHorizontal: 37
-  },
-  view: {
-    flexDirection: 'row',
-    alignItems: 'center'
-  },
-  viewText: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'colum',
-    marginRight: 10
-  },
-  text: {
-    fontSize: 15,
-    marginBottom: 8
-  },
-  link: {
-    textDecorationLine: 'underline',
-    color: 'blue',
-    fontSize: 16
-  }
-});
 
 export default PaginaWeb;
