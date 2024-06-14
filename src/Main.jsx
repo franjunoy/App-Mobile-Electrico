@@ -12,8 +12,8 @@ const Main = () => {
   };
 
   return (
-    <View style={styles.container}>
-      <View style={styles.layer}>
+    <View className='flex-1 mt-24'>
+      <View className='flex-1'>
         <Home toggleMenu={toggleMenu} />
         {isOpen && (
           <View style={StyleSheet.absoluteFill}>
@@ -25,15 +25,5 @@ const Main = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 25
-  },
-  layer: {
-    flex: 1
-  }
-});
 
 export default Main;
