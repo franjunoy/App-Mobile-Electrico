@@ -11,8 +11,8 @@ import Reader from './Reader';
 
 const Home = ({ toggleMenu }) => {
   return (
-    <View height='100%' width='100%'>
-      <View style={{ paddingBottom: 10 }}>
+    <View>
+      <View>
         <Header toggleMenu={toggleMenu} />
       </View>
       <ScrollView>
@@ -20,14 +20,7 @@ const Home = ({ toggleMenu }) => {
         <Reader />
         <MisConsumos />
         <FacturaElectronica />
-        <View
-          style={{
-            flexDirection: 'row',
-            marginHorizontal: 38,
-            width: 305,
-            marginVertical: 10
-          }}
-        >
+        <View>
           <SimuladorDeConsumo />
           <Mapa />
           <Soporte />
