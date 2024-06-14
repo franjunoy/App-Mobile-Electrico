@@ -7,24 +7,13 @@ import { useNavigation } from '@react-navigation/native';
 const FacturaElectronica = () => {
   const navigation = useNavigation();
   return (
-    <View style={styles.buttonsContainer}>
-      <Button
-        buttonStyle={{
-          backgroundColor: '#FFEB81',
-          borderRadius: 10,
-          borderWidth: 1,
-          borderColor: '#d9d9d9',
-          height: 80,
-          width: 305,
-          marginHorizontal: 50
-        }}
-        onPress={() => navigation.navigate('PagarFactura')}
-      >
-        <View style={styles.view}>
+    <View>
+      <Button onPress={() => navigation.navigate('PagarFactura')}>
+        <View>
           <Icon name='receipt' size={40} color='black' marginRight={20} />
-          <View style={styles.viewText}>
-            <Text style={styles.text}>Factura </Text>
-            <Text style={styles.text}>electronica</Text>
+          <View>
+            <Text>Factura </Text>
+            <Text>electronica</Text>
           </View>
         </View>
         <Icon name='chevron-right' size={25} color='black' marginLeft={40} />
@@ -32,29 +21,5 @@ const FacturaElectronica = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  buttonsContainer: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '100%',
-    marginVertical: 10
-  },
-  view: {
-    flexDirection: 'row',
-    alignItems: 'center'
-  },
-  viewText: {
-    flexDirection: 'column',
-    alignItems: 'center',
-    marginRight: 30
-  },
-  text: {
-    marginLeft: 0,
-    fontSize: 18
-  }
-});
 
 export default FacturaElectronica;
