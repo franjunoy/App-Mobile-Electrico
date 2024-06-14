@@ -54,41 +54,14 @@ const Calculadora = () => {
   ];
 
   return (
-    <View style={styles.container}>
+    <View>
       {buttonsData.map((buttonText, index) => (
-        <TouchableOpacity
-          key={index}
-          style={styles.button}
-          onPress={() => onPressButton(buttonText)}
-        >
-          <Text style={styles.buttonText}>{buttonText}</Text>
+        <TouchableOpacity key={index} onPress={() => onPressButton(buttonText)}>
+          <Text>{buttonText}</Text>
         </TouchableOpacity>
       ))}
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
-    padding: 10
-  },
-  button: {
-    width: '30%',
-    aspectRatio: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#3498db',
-    marginVertical: 10,
-    borderRadius: 8
-  },
-  buttonText: {
-    color: 'white',
-    fontSize: 16
-  }
-});
 
 export default Calculadora;
