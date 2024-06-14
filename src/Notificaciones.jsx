@@ -5,27 +5,13 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 
 const Notificaciones = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>¡Hola!</Text>
-      <Button color='transparent'>
+    <View>
+      <Text className='text-lg'>¡Hola!</Text>
+      <Button>
         <Icon name='bell' size={25} color='black' />
       </Button>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '100%'
-  },
-
-  text: {
-    marginRight: 250,
-    fontSize: 20
-  }
-});
 
 export default Notificaciones;
