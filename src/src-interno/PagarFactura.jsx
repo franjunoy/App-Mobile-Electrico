@@ -3,13 +3,10 @@ import { StyleSheet, View, Text } from 'react-native';
 
 const PagarFactura = () => {
   return (
-    <View style={styles.container}>
+    <View>
       <Text>PagarFactura</Text>
-      <StatusBar style='auto' />
     </View>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default PagarFactura;
