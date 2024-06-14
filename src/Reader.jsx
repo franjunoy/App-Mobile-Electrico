@@ -8,29 +8,12 @@ const Reader = () => {
   const navigation = useNavigation();
 
   return (
-    <View style={styles.container}>
-      <Button
-        color='transparent'
-        onPress={() => navigation.navigate('ScannerQr')}
-      >
+    <View>
+      <Button onPress={() => navigation.navigate('ScannerQr')}>
         <Icon name='desktop' size={25} color='black' />
       </Button>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '100%'
-  },
-
-  text: {
-    marginRight: 250,
-    fontSize: 20
-  }
-});
 
 export default Reader;
