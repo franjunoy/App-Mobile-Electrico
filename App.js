@@ -2,13 +2,13 @@ import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Main from './src/Main';
-import MisConsumos from './src/src-interno/MisConsumos';
-import MapaDeCortes from './src/src-interno/MapaDeCortes';
-import Calculadora from './src/src-interno/Calculadora';
-import PagarFactura from './src/src-interno/PagarFactura';
-import ScannerQr from './src/src-interno/ScannerQr';
-import Soporte from './src/src-interno/Soporte';
+import Main from './src/component/Main';
+import MisConsumos from './src/component/src-interno/MisConsumos';
+import MapaDeCortes from './src/component/src-interno/MapaDeCortes';
+import Calculadora from './src/component/src-interno/Calculadora';
+import PagarFactura from './src/component/src-interno/PagarFactura';
+import ScannerQr from './src/component/src-interno/ScannerQr';
+import Soporte from './src/component/src-interno/Soporte';
 export default function App() {
   const Stack = createNativeStackNavigator();
   return (
