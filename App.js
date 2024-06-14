@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Main from './src/Main';
@@ -12,7 +12,7 @@ import Soporte from './src/src-interno/Soporte';
 export default function App() {
   const Stack = createNativeStackNavigator();
   return (
-    <NavigationContainer style={styles.container}>
+    <NavigationContainer>
       <Stack.Navigator initialRouteName='Main'>
         <Stack.Screen
           name='Main'
@@ -28,14 +28,7 @@ export default function App() {
         <Stack.Screen name='Calculadora' component={Calculadora} />
         <Stack.Screen name='Soporte' component={Soporte} />
       </Stack.Navigator>
+      <StatusBar style='auto' />
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-});
