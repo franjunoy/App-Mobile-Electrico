@@ -1,21 +1,24 @@
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
-import { Button } from '@rneui/themed';
-import Icon from 'react-native-vector-icons/FontAwesome5';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
+import Consumo from '../../assets/Consumo.png';
 import { useNavigation } from '@react-navigation/native';
 
 const MisConsumos = () => {
   const navigation = useNavigation();
 
   return (
-    <View>
-      <Button onPress={() => navigation.navigate('MisConsumos')}>
+    <View className='w-full h-36 items-center justify-center bg-gray-200'>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('MisConsumos')}
+        className='w-64 h-26 border p-2 bg-electric-yellow rounded-lg items-center'
+      >
         <View>
-          <Icon name='plug' size={40} color='black' marginRight={20} />
-          <Text>Mis consumos</Text>
+          <Image source={Consumo} className='w-16 h-16' />
         </View>
-        <Icon name='chevron-right' size={25} color='black' marginLeft={40} />
-      </Button>
+        <View>
+          <Text className='text-lg font-bold'>Mis consumos</Text>
+        </View>
+      </TouchableOpacity>
     </View>
   );
 };
