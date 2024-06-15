@@ -15,7 +15,7 @@ const Main = () => {
       <View>
         <Home toggleMenu={toggleMenu} />
         {isOpen && (
-          <View className='absolute top-16 w-64 '>
+          <View className='absolute top-16'>
             <Menu isOpen={isOpen} toggleMenu={toggleMenu} />
           </View>
         )}
