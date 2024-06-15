@@ -1,23 +1,23 @@
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
-import { Button } from '@rneui/themed';
-import Icon from 'react-native-vector-icons/FontAwesome5';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import Factura from '../../assets/Factura.png';
 
 const FacturaElectronica = () => {
   const navigation = useNavigation();
   return (
-    <View>
-      <Button onPress={() => navigation.navigate('PagarFactura')}>
+    <View className='w-full h-36 items-center justify-center bg-gray-200'>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('PagarFactura')}
+        className='w-64 h-26 border p-2 bg-electric-yellow rounded-lg items-center'
+      >
         <View>
-          <Icon name='receipt' size={40} color='black' marginRight={20} />
-          <View>
-            <Text>Factura </Text>
-            <Text>electronica</Text>
-          </View>
+          <Image source={Factura} className='w-16 w h-16' />
         </View>
-        <Icon name='chevron-right' size={25} color='black' marginLeft={40} />
-      </Button>
+        <View>
+          <Text className='text-lg font-bold'>Factura electronica</Text>
+        </View>
+      </TouchableOpacity>
     </View>
   );
 };
