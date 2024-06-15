@@ -12,16 +12,29 @@ import Reader from './Reader';
 const Home = ({ toggleMenu }) => {
   return (
     <View>
-      <View className='top-10'>
+      <View className='mt-10'>
         <Header toggleMenu={toggleMenu} />
       </View>
+
       <ScrollView>
-        <View className='top-10'>
+        <View>
           <Notificaciones />
         </View>
-        {/* <Reader />
-        <MisConsumos />
-        <FacturaElectronica />
+
+        <View>
+          <Reader />
+        </View>
+
+        <View>
+          <MisConsumos />
+        </View>
+
+        <View>
+          <FacturaElectronica />
+        </View>
+        {/* 
+       
+       
         <View>
           <SimuladorDeConsumo />
           <Mapa />
