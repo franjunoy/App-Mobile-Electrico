@@ -1,7 +1,6 @@
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
-import { Button } from '@rneui/themed';
-import Icon from 'react-native-vector-icons/FontAwesome5';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
+import Calculadora from '../../assets/Calculadora.png';
 import { useNavigation } from '@react-navigation/native';
 
 const SimuladorDeConsumo = () => {
@@ -9,24 +8,21 @@ const SimuladorDeConsumo = () => {
 
   return (
     <View>
-      <Button onPress={() => navigation.navigate('Calculadora')}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('Calculadora')}
+        className='w-28 h-24 border p-2 bg-electric-yellow rounded-lg'
+      >
         <View>
-          <View>
-            <Icon
-              name='tachometer-alt'
-              size={20}
-              color='black'
-              padding={5}
-              justifyContent='center'
-              alignItems='center'
-            />
+          <View className='items-center'>
+            <Image source={Calculadora} className='w-11 h-11' />
           </View>
-          <View>
-            <Text>Simulador de</Text>
-            <Text>Consumo</Text>
+          <View className='mt-1'>
+            <Text className='text-xs font-bold text-center'>
+              Simulador de Consumo
+            </Text>
           </View>
         </View>
-      </Button>
+      </TouchableOpacity>
     </View>
   );
 };
