@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  View,
-  StyleSheet,
-  Text,
-  Linking,
-  TouchableOpacity
-} from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome5';
+import { View, Text, Image, Linking, TouchableOpacity } from 'react-native';
 
 const PaginaWeb = () => {
   const abrirPaginaWeb = () => {
@@ -14,15 +7,14 @@ const PaginaWeb = () => {
     Linking.openURL(url);
   };
   return (
-    <View>
+    <View className='w-full h-36 items-center justify-center'>
       <View>
-        <Icon name='link' size={40} color='black' marginRight={16} />
-        <View>
-          <Text>Visita nuestra página web</Text>
-          <TouchableOpacity onPress={abrirPaginaWeb}>
-            <Text>https://www.celp.com.ar/</Text>
-          </TouchableOpacity>
-        </View>
+        <Text className='text-base font-bold'>Visita nuestra página web</Text>
+        <TouchableOpacity onPress={abrirPaginaWeb}>
+          <Text className='text-base font-bold underline text-electric-yellow'>
+            https://www.celp.com.ar/
+          </Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
