@@ -7,7 +7,7 @@ const Reader = () => {
   const navigation = useNavigation();
 
   return (
-    <View className='items-center bg-gray-200'>
+    <View className='items-center'>
       <View className='border p-2 bg-electric-yellow rounded-lg'>
         <TouchableOpacity onPress={() => navigation.navigate('ScannerQr')}>
           <Image source={Scanner} className='w-20 h-20' />
