@@ -11,7 +11,7 @@ import Reader from './Reader';
 
 const Home = ({ toggleMenu }) => {
   return (
-    <View>
+    <View className='bg-gray-200 h-full w-full'>
       <View className='mt-10'>
         <Header toggleMenu={toggleMenu} />
       </View>
@@ -32,15 +32,14 @@ const Home = ({ toggleMenu }) => {
         <View>
           <FacturaElectronica />
         </View>
-        {/* 
-       
-       
-        <View>
+        <View className='flex-row w-full h-36 items-center justify-between px-8'>
           <SimuladorDeConsumo />
           <Mapa />
           <Soporte />
         </View>
-        <PaginaWeb /> */}
+        <View>
+          <PaginaWeb />
+        </View>
       </ScrollView>
     </View>
   );
