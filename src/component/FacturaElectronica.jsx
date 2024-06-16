@@ -6,10 +6,10 @@ import Factura from '../../assets/Factura.png';
 const FacturaElectronica = () => {
   const navigation = useNavigation();
   return (
-    <View className='w-full h-36 items-center justify-center bg-gray-200'>
+    <View className='w-full h-36 items-center justify-center'>
       <TouchableOpacity
         onPress={() => navigation.navigate('PagarFactura')}
-        className='w-64 h-26 border p-2 bg-electric-yellow rounded-lg items-center'
+        className='w-64 h-28 border p-2 bg-electric-yellow rounded-lg items-center'
       >
         <View>
           <Image source={Factura} className='w-16 w h-16' />
