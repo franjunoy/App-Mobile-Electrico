@@ -1,7 +1,6 @@
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
-import { Button } from '@rneui/themed';
-import Icon from 'react-native-vector-icons/FontAwesome5';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
+import Mapa from '../../assets/Mapa.png';
 import { useNavigation } from '@react-navigation/native';
 
 const FacturaElectronica = () => {
@@ -9,24 +8,21 @@ const FacturaElectronica = () => {
 
   return (
     <View>
-      <Button onPress={() => navigation.navigate('MapaDeCortes')}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('MapaDeCortes')}
+        className='w-28 h-24 border p-2 bg-electric-yellow rounded-lg '
+      >
         <View>
-          <View>
-            <Icon
-              name='map-marked-alt'
-              size={20}
-              color='black'
-              padding={5}
-              justifyContent='center'
-              alignItems='center'
-            />
+          <View className='items-center'>
+            <Image source={Mapa} className='w-10 h-10' />
           </View>
-          <View>
-            <Text>Mapa de</Text>
-            <Text>Cortes</Text>
+          <View className='mt-2'>
+            <Text className='text-xs font-bold text-center'>
+              Mapa de Cortes
+            </Text>
           </View>
         </View>
-      </Button>
+      </TouchableOpacity>
     </View>
   );
 };
