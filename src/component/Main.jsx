@@ -1,4 +1,4 @@
-import { View, TouchableOpacity } from 'react-native';
+import { View } from 'react-native';
 import { useState } from 'react';
 import Home from './Home';
 import Menu from './Menu';
@@ -15,7 +15,7 @@ const Main = () => {
       <View>
         <Home toggleMenu={toggleMenu} />
         {isOpen && (
-          <View className='absolute top-10 h-full w-64 border bg-gray-200'>
+          <View className='absolute top-10 h-full w-full '>
             <Menu isOpen={isOpen} toggleMenu={toggleMenu} />
           </View>
         )}
