@@ -32,7 +32,7 @@ const Menu = ({ isOpen, toggleMenu }) => {
         <View>
           <View>
             <View>
-              <Text>Cooperativa Eléctrica Pergamino</Text>
+              <Text>Cooperativa Eléctrica</Text>
             </View>
             <TouchableOpacity onPress={toggleMenu}>
               <View>
@@ -40,7 +40,7 @@ const Menu = ({ isOpen, toggleMenu }) => {
               </View>
             </TouchableOpacity>
           </View>
-          <FlatList data={menuItems} renderItem={renderMenuItem}></FlatList>
+
           <View></View>
           <View>
             <Icon name='home' color='black' size={30} marginLeft={10} />
