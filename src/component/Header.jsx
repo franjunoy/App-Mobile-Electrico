@@ -20,7 +20,9 @@ const Header = ({ toggleMenu }) => {
       </View>
       <View>
         <TouchableOpacity>
-          <Image source={Persona} className='w-16 h-16' />
+          <View className='border rounded-full'>
+            <Image source={Persona} className='w-14 h-14' />
+          </View>
         </TouchableOpacity>
       </View>
       <StatusBar style='auto' />
