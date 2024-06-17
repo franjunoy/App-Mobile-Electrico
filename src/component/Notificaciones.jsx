@@ -6,7 +6,7 @@ const Notificaciones = () => {
   return (
     <View className='w-full h-14 items-center flex-row justify-between px-5'>
       <View className=' '>
-        <Text className=' text-xl text-electric-yellow font-bold'>¡Hola!</Text>
+        <Text className=' text-xl font-bold'>¡Hola!</Text>
       </View>
       <View>
         <TouchableOpacity>
