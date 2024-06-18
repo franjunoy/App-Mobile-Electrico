@@ -9,6 +9,7 @@ import Calculadora from './src/component/src-interno/Calculadora';
 import PagarFactura from './src/component/src-interno/PagarFactura';
 import ScannerQr from './src/component/src-interno/ScannerQr';
 import Soporte from './src/component/src-interno/Soporte';
+import Perfil from './src/component/src-interno/Perfil';
 export default function App() {
   const Stack = createNativeStackNavigator();
   return (
@@ -27,6 +28,7 @@ export default function App() {
         <Stack.Screen name='PagarFactura' component={PagarFactura} />
         <Stack.Screen name='Calculadora' component={Calculadora} />
         <Stack.Screen name='Soporte' component={Soporte} />
+        <Stack.Screen name='Perfil' component={Perfil} />
       </Stack.Navigator>
       <StatusBar style='auto' />
     </NavigationContainer>
