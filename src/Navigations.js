@@ -5,6 +5,7 @@ import Calculadora from './component/src-interno/Calculadora';
 import PagarFactura from './component/src-interno/PagarFactura';
 import ScannerQr from './component/src-interno/ScannerQr';
 import Soporte from './component/src-interno/Soporte';
+import Perfil from './component/src-interno/Perfil';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator();
@@ -25,6 +26,7 @@ const Navigator = () => {
       <Stack.Screen name='PagarFactura' component={PagarFactura} />
       <Stack.Screen name='Calculadora' component={Calculadora} />
       <Stack.Screen name='Soporte' component={Soporte} />
+      <Stack.Screen name='Perfil' component={Perfil} />
     </Stack.Navigator>
   );
 };
