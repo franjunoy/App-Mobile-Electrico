@@ -4,8 +4,11 @@ import { StatusBar } from 'expo-status-bar';
 import Menu from '../../assets/Menu.png';
 import Persona from '../../assets/Persona.png';
 import Logo from '../../assets/Logo.png';
+import { useNavigation } from '@react-navigation/native';
 
 const Header = ({ toggleMenu }) => {
+  const navigation = useNavigation();
+
   return (
     <View className='w-full h-16 bg-electric-yellow items-center flex-row justify-between px-1'>
       <View className='flex-row '>
@@ -19,7 +22,7 @@ const Header = ({ toggleMenu }) => {
         </View>
       </View>
       <View>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Perfil')}>
           <View className='border rounded-full'>
             <Image source={Persona} className='w-14 h-14' />
           </View>
