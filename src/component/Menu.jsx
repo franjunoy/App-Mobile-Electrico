@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Image, Text, TouchableOpacity } from 'react-native';
+import { View, Image, Text, TouchableOpacity, Dimensions } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import Apagar from '../../assets/Apagar.png';
 import Home from '../../assets/Home.png';
@@ -10,6 +10,8 @@ import Informacion from '../../assets/Informacion.png';
 import Configuracion from '../../assets/Configuracion.png';
 
 const Menu = ({ isOpen, toggleMenu }) => {
+  const { height } = Dimensions.get('window');
+  const marginTopClass = height >= 949 ? 'mt-32' : 'mt-11';
   return (
     <View className='flex-row'>
       <View className='h-full w-64 border bg-gray-200'>
@@ -72,7 +74,7 @@ const Menu = ({ isOpen, toggleMenu }) => {
                 </View>
               </View>
 
-              <View className='mt-11'></View>
+              <View className={marginTopClass}></View>
 
               <View className='flex-row h-16 justify-between p-2 border-y-2 bg-electric-yellow items-center mt-80'>
                 <View>
