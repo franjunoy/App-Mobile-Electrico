@@ -1,63 +1,84 @@
 import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
+import Persona from '../../../assets/Persona.png';
+import Persona2 from '../../../assets/Persona2.png';
+import Flecha from '../../../assets/Flecha.png';
+import Linea from '../../../assets/Linea.png';
+import Seguridad from '../../../assets/Seguridad.png';
+import Mapa from '../../../assets/Mapa.png';
+import Tarjeta from '../../../assets/Tarjeta.png';
+import Enviar from '../../../assets/Enviar.png';
 
 const Perfil = () => {
   return (
-    <View className='items-center flex-1 bg-gray-100'>
+    <View className='items-center flex-1 bg-gray-200'>
       <View className='flex flex-col p-4'>
-        <View className='items-start mt-2'>
-          <Text className='text-xl font-bold text-teal-900'>Mi perfil</Text>
-        </View>
-
-        <View className='flex flex-row items-center mt-4'>
-          <View className='items-start mt-10'>
-            <Text className='text-lg font-bold text-teal-900'>Nombre</Text>
-            <Text className='text-sm text-gray-600'>Email</Text>
+        <View className='flex flex-row items-center mt-4 ml-16'>
+          <TouchableOpacity>
+            <View className='border rounded-full'>
+              <Image source={Persona} className=' w-32 h-32 ' />
+            </View>
+          </TouchableOpacity>
+          <View className='items-start mt-10 ml-3'>
+            <Text className='text-xl text font-bold'>Nombre</Text>
+            <Text className='text-base text-gray-600'>Email</Text>
           </View>
-          <View className='mb-10'></View>
         </View>
 
-        <View className='items-center'>
+        <View className=' mt-10 items-center'>
+          <Image source={Linea} className='w-96  items-center' />
+        </View>
+
+        <View className='mt-10'>
           <View className='flex flex-col space-y-8 items-center'>
-            <View className='flex flex-row items-center w-64 justify-between'>
-              <Text className='text-teal-900 text-xl font-bold ml-3'>
-                Sobre mi cuenta
-              </Text>
-              <View className='flex-grow' />
-            </View>
-            <View className='flex flex-row items-center w-64 justify-between'>
-              <Text className='text-teal-900 text-xl font-bold ml-3'>
-                Mi Curso
-              </Text>
-              <View className='flex-grow' />
-            </View>
-            <View className='flex flex-row items-center w-64 justify-between'>
-              <Text className='text-teal-900 text-xl font-bold ml-3'>
-                Configurar datos Personales
-              </Text>
-              <View className='flex-grow' />
-            </View>
-            <View className='flex flex-row items-center w-64 justify-between'>
-              <Text className='text-teal-900 text-xl font-bold ml-3 '>
-                Invitar a un amigo
-              </Text>
-              <View className='flex-grow' />
-            </View>
-            <View className='flex flex-row items-center w-64 justify-between'>
-              <Text className='text-teal-900 text-xl font-bold ml-3 '>
-                Cerrar sesion
-              </Text>
-              <View className='flex-grow' />
-              <TouchableOpacity></TouchableOpacity>
-            </View>
+            <TouchableOpacity>
+              <View className='flex flex-row items-center w-64 justify-between'>
+                <Image source={Persona2} className='w-8 h-8' />
+
+                <Text className='text-xl font-bold '>Datos de tu cuenta</Text>
+
+                <Image source={Flecha} className=' w-8 h-8 ' />
+              </View>
+            </TouchableOpacity>
+
+            <TouchableOpacity>
+              <View className='flex flex-row items-center w-64 justify-between'>
+                <Image source={Seguridad} className='w-9 h-9' />
+
+                <Text className='text-xl font-bold ml-2'>Seguridad</Text>
+
+                <Image source={Flecha} className=' w-8 h-8 ' />
+              </View>
+            </TouchableOpacity>
+
+            <TouchableOpacity>
+              <View className='flex flex-row items-center w-64 justify-between'>
+                <Image source={Mapa} className='w-9 h-9' />
+                <Text className='text-xl font-bold '>Cambiar domicilio</Text>
+
+                <Image source={Flecha} className=' w-8 h-8 ' />
+              </View>
+            </TouchableOpacity>
+
+            <TouchableOpacity>
+              <View className='flex flex-row items-center w-64 justify-between'>
+                <Image source={Tarjeta} className='w-9 h-9' />
+                <Text className='text-xl font-bold'>Tarjetas</Text>
+
+                <Image source={Flecha} className=' w-8 h-8 ' />
+              </View>
+            </TouchableOpacity>
+
+            <TouchableOpacity>
+              <View className='flex flex-row items-center w-64 justify-between'>
+                <Image source={Enviar} className='w-9 h-9' />
+                <Text className='text-xl font-bold '>Invitar a un amigo</Text>
+
+                <Image source={Flecha} className=' w-8 h-8 ' />
+              </View>
+            </TouchableOpacity>
           </View>
         </View>
-      </View>
-
-      <View className=' items-center mt-24'>
-        <Text className='text-[#6C6C6C] text-xs'>
-          Privacy Policy Terms and Conditions
-        </Text>
       </View>
     </View>
   );
