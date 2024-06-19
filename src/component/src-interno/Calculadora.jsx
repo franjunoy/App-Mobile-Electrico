@@ -43,7 +43,7 @@ const Calculadora = () => {
     { image: Iluminacion, text: 'Iluminacion', consumo: 50 },
     { image: Lavarropas, text: 'Lavarropas', consumo: 1000 },
     { image: Microondas, text: 'Microondas', consumo: 900 },
-    { image: PavaElectrica, text: 'Pava Electrica', consumo: 1350 },
+    { image: PavaElectrica, text: 'Pava Elect', consumo: 1350 },
     { image: Plancha, text: 'Plancha', consumo: 1400 },
     { image: Television, text: 'Television', consumo: 100 },
     { image: Termotanque, text: 'Termotanque', consumo: 2500 },
