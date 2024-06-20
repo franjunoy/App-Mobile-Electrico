@@ -47,7 +47,7 @@ const Menu = ({ isOpen, toggleMenu }) => {
                 <View className='mt-4'>
                   <TouchableOpacity className='flex-row items-center justify-between p-1'>
                     <Text className='text-xl font-bold'>
-                      Factuira Electronica
+                      Factura Electronica
                     </Text>
                     <Image source={Factura} className='w-10 w h-10' />
                   </TouchableOpacity>
