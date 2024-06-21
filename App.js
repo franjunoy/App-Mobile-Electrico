@@ -33,7 +33,13 @@ export default function App() {
         <Stack.Screen name='Soporte' component={Soporte} />
         <Stack.Screen name='Perfil' component={Perfil} />
         <Stack.Screen name='Notificaciones' component={Notificaciones} />
-        <Stack.Screen name='Login' component={Login} />
+        <Stack.Screen
+          name='Login'
+          component={Login}
+          options={{
+            headerShown: false
+          }}
+        />
       </Stack.Navigator>
       <StatusBar style='auto' />
     </NavigationContainer>
