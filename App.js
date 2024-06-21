@@ -17,7 +17,7 @@ export default function App() {
   const Stack = createNativeStackNavigator();
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Main'>
+      <Stack.Navigator initialRouteName='Login'>
         <Stack.Screen
           name='Main'
           component={Main}
