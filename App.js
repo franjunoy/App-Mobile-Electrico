@@ -11,6 +11,8 @@ import ScannerQr from './src/component/src-interno/ScannerQr';
 import Soporte from './src/component/src-interno/Soporte';
 import Perfil from './src/component/src-interno/Perfil';
 import Notificaciones from './src/component/src-interno/Notificaciones';
+import Login from './src/component/Login';
+
 export default function App() {
   const Stack = createNativeStackNavigator();
   return (
@@ -31,6 +33,7 @@ export default function App() {
         <Stack.Screen name='Soporte' component={Soporte} />
         <Stack.Screen name='Perfil' component={Perfil} />
         <Stack.Screen name='Notificaciones' component={Notificaciones} />
+        <Stack.Screen name='Login' component={Login} />
       </Stack.Navigator>
       <StatusBar style='auto' />
     </NavigationContainer>
