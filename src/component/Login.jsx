@@ -7,6 +7,7 @@ import {
   ScrollView,
   Alert
 } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
 
 const LoginComponent = () => {
@@ -83,8 +84,10 @@ const LoginComponent = () => {
                 </TouchableOpacity>
               </View>
             </View>
-            <View className='w-[300px] h-[50px] mt-12 justify-center items-center'>
-              <Button text='Ingresar' onPress={navigateToHome} />
+            <View className=' w-52 h-12 mt-12 justify-center items-center border rounded-lg bg-electric-yellow'>
+              <TouchableOpacity onPress={navigateToHome}>
+                <Text className='text-xl font-bold'>Ingresar</Text>
+              </TouchableOpacity>
             </View>
             <View className='w-[270px] h-[22px] mt-2 flex flex-row justify-center items-center'>
               <Text className='text-[#6C6C6C] text-xs'>
