@@ -5,10 +5,13 @@ import {
   TextInput,
   TouchableOpacity,
   ScrollView,
-  Alert
+  Image
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
+import Apple from '../../assets/Apple.png';
+import Facebook from '../../assets/Facebook.png';
+import Google from '../../assets/Google.png';
 
 const LoginComponent = () => {
   const navigation = useNavigation();
@@ -35,7 +38,7 @@ const LoginComponent = () => {
       </View>
 
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-        <View className='items-center mt-20'>
+        <View className='items-center mt-20 w-full h-full'>
           <View className=''>
             <Text className='text-center text-black text-2xl font-bold'>
               Bienvenido de nuevo! 👋
@@ -101,23 +104,22 @@ const LoginComponent = () => {
               </Text>
             </TouchableOpacity>
           </View>
-          {/* <View className='mt-16 flex flex-col items-center'>
-              <Text className='text-[#6C6C6C] text-xs mb-2'>
-                O inicia sesión con
-              </Text>
-              <View className='flex flex-row mt-2'>
-                <TouchableOpacity className='items-center justify-center border rounded-full w-[50px] h-[50px] border-gray-300 bg-gray-200 mx-2'>
-                  <GoogleSVG />
-                </TouchableOpacity>
-                <TouchableOpacity className='items-center justify-center border rounded-full w-[50px] h-[50px] border-gray-300 bg-gray-200 mx-2'>
-                  <AppleSVG />
-                </TouchableOpacity>
-                <TouchableOpacity className='items-center justify-center border rounded-full w-[50px] h-[50px] border-gray-300 bg-gray-200 mx-2'>
-                  <FacebookSVG />
-                </TouchableOpacity>
-              </View>
-            </View> */}
-          <View className='h-[150px]'></View>
+          <View className='mt-16 flex flex-col items-center'>
+            <Text className='text-[#6C6C6C] text-xs font-semibold mb-2'>
+              O inicia sesión con
+            </Text>
+            <View className='flex flex-row mt-2'>
+              <TouchableOpacity className='items-center justify-center w-[50px] h-[50px]  mx-3'>
+                <Image source={Apple} className='w-11 h-11' />
+              </TouchableOpacity>
+              <TouchableOpacity className='items-center justify-center w-[50px] h-[50px]  mx-3'>
+                <Image source={Google} className='w-11 h-11' />
+              </TouchableOpacity>
+              <TouchableOpacity className='items-center justify-center w-[50px] h-[50px]  mx-3'>
+                <Image source={Facebook} className='w-11 h-11' />
+              </TouchableOpacity>
+            </View>
+          </View>
         </View>
       </ScrollView>
     </View>
