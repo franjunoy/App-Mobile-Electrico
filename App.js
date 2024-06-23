@@ -12,6 +12,7 @@ import Soporte from './src/component/src-interno/Soporte';
 import Perfil from './src/component/src-interno/Perfil';
 import Notificaciones from './src/component/src-interno/Notificaciones';
 import Login from './src/component/Login';
+import Register from './src/component/Register';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -36,6 +37,13 @@ export default function App() {
         <Stack.Screen
           name='Login'
           component={Login}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name='Register'
+          component={Register}
           options={{
             headerShown: false
           }}
