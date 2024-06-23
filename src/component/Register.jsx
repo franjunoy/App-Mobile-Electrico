@@ -25,34 +25,29 @@ const RegisterComponent = ({ title, subTitle }) => {
   const handleRegister = async () => {};
 
   return (
-    <View className='flex flex-col items-center w-full'>
-      <View className='flex flex-row items-center w-full'>
-        <View>
-          <ButtonArrow />
-        </View>
-        <View className=' flex-1 mr-14'>
-          <Text className='text-center text-zinc-900 text-xl font-bold mt-3'>
-            Registro
-          </Text>
-        </View>
+    <View className='flex-1 flex-col mt-10 w-full h-full bg-gray-200'>
+      <View className=''>
+        <Text className='text-center text-black text-2xl font-bold mt-3'>
+          Registrate
+        </Text>
       </View>
-      <ScrollView>
-        <View className='w-[358px] items-center mt-2'>
-          <View className=' h-[40px] mt-3 justify-center items-start'>
-            <Text className='text-center text-teal-900 text-2xl font-bold'>
+
+      <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+        <View className='items-center mt-20 w-full h-full'>
+          <View className=''>
+            <Text className='text-center text-black text-2xl font-bold'>
               Registrate
             </Text>
           </View>
-          <View className=' h-[65px] justify-center items-start'>
-            <Text className='text-gray-500 text-sm'>
+          <View className='mt-3'>
+            <Text className='text-gray-700 text-sm font-medium'>
               Comienza hoy tu cuenta
             </Text>
           </View>
-
-          <View>
-            <Text className=' text-teal-900 text-base'>Nombre</Text>
+          <View className='mt-10'>
+            <Text className='text-black text-base font-semibold'>Nombre</Text>
             <TextInput
-              className='w-[320px] h-[40px] mt-2 border border-teal-900 rounded-lg px-2'
+              className='w-80 h-10 mt-2 border border-black rounded-lg px-2 font-semibold'
               placeholder='Ingresa tu nombre'
               value={name}
               onChangeText={setName}
@@ -62,9 +57,9 @@ const RegisterComponent = ({ title, subTitle }) => {
           </View>
 
           <View className=' mt-4'>
-            <Text className='text-teal-900 text-base'>Email</Text>
+            <Text className='text-black text-base font-semibold'>Email</Text>
             <TextInput
-              className='w-[320px] mt-2 h-[40px] border border-teal-900 rounded-lg px-2'
+              className='w-80 h-10 mt-2 border border-black rounded-lg px-2 font-semibold'
               placeholder='Ingresa tu email'
               value={email}
               onChangeText={setEmail}
@@ -74,9 +69,11 @@ const RegisterComponent = ({ title, subTitle }) => {
           </View>
 
           <View className='top-4'>
-            <Text className='text-teal-900 text-base'>Contraseña</Text>
+            <Text className='text-black text-base font-semibold'>
+              Contraseña
+            </Text>
             <TextInput
-              className='w-[320px] mt-2 h-[40px] border border-teal-900 rounded-lg px-2'
+              className='w-80 h-10 mt-2 border border-black rounded-lg px-2 font-semibold'
               placeholder='Ingresa tu contraseña'
               value={password}
               onChangeText={setPassword}
@@ -84,25 +81,14 @@ const RegisterComponent = ({ title, subTitle }) => {
             />
           </View>
 
-          <View className='w-[322px] h-[40px] top-8'>
-            <Text className=' text-teal-900 text-base'>
-              Selecciona un curso
-            </Text>
-            <View className='top-1'>
-              <Dropdown
-                options={courseName?.map((ele) => ele?.nombre)}
-                selectedOption={selectedOption}
-                onSelect={setSlectedOption}
-              />
-            </View>
+          <View className=' w-52 h-12 mt-12 justify-center items-center border rounded-lg bg-electric-yellow'>
+            <TouchableOpacity onPress={navigateToHome}>
+              <Text className='text-xl font-bold'>Ingresar</Text>
+            </TouchableOpacity>
           </View>
 
-          <View className='w-[300px] h-[50px] mt-24 justify-center items-center'>
-            <Button text='Prueba gratis' onPress={handleRegister} />
-          </View>
-
-          <View className='mt-12 flex flex-col items-center'>
-            <Text className='text-[#6C6C6C] text-xs mb-2'>
+          <View className='mt-16 flex flex-col items-center'>
+            <Text className='text-[#6C6C6C] text-xs font-semibold mb-2'>
               O registrate con
             </Text>
             <View className='flex flex-row mt-2'>
