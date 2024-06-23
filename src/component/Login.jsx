@@ -29,6 +29,10 @@ const LoginComponent = () => {
     navigation.navigate('Main');
   };
 
+  navigateToRegister = () => {
+    navigation.navigate('Register');
+  };
+
   return (
     <View className='flex-1 flex-col mt-10 w-full h-full bg-gray-200'>
       <View className=''>
@@ -98,7 +102,7 @@ const LoginComponent = () => {
             <Text className='text-[#6C6C6C] text-xs font-semibold'>
               ¿Aún no tienes cuenta?
             </Text>
-            <TouchableOpacity /* onPress={navigateToRegister} */>
+            <TouchableOpacity onPress={navigateToRegister}>
               <Text className='border-teal-900 text-xs font-semibold underline ml-1'>
                 Regístrate
               </Text>
