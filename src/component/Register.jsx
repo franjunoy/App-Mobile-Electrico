@@ -4,28 +4,12 @@ import {
   Text,
   TextInput,
   TouchableOpacity,
-  Alert,
   ScrollView
 } from 'react-native';
-import Button from '../../components/ReusableComponents/Buttons/Button';
-import ButtonArrow from '../../components/ReusableComponents/Buttons/ButtonArrow';
-import AppleSVG from '../../../assets/svg/loginRegister/AppleSVG';
-import GoogleSVG from '../../../assets/svg/loginRegister/GoogleSVG';
-import FacebookSVG from '../../../assets/svg/loginRegister/FacebookSVG';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import auth from '../../Firebase/FirebaseConfig';
+import Apple from '../../assets/Apple.png';
+import Facebook from '../../assets/Facebook.png';
+import Google from '../../assets/Google.png';
 import { useNavigation } from '@react-navigation/native';
-import { registerRequest } from '../../peticiones/auth';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { getCursoName } from '../../screens/peticiones/mobile';
-import Dropdown from './Dropdown';
-import { setUsers } from '../../screens/redux/reducer/userReducer';
-import { useDispatch } from 'react-redux';
-import {
-  setFormaciones,
-  setModulos,
-  setTemas
-} from '../../screens/redux/reducer/cursoRedurcer';
 
 const RegisterComponent = ({ title, subTitle }) => {
   const [name, setName] = useState('');
@@ -33,66 +17,12 @@ const RegisterComponent = ({ title, subTitle }) => {
   const [password, setPassword] = useState('');
   const [selectedOption, setSlectedOption] = useState();
   const navigation = useNavigation();
-  const [cursoId, setCursoId] = useState('');
-  const [courseName, setCourseName] = useState([]);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    const fetchFormations = async () => {
-      try {
-        await getCursoName({
-          success: (data) => setCourseName(data.payload),
-          error: (err) => console.log(err),
-          loading: (isLoading) => console.log(isLoading)
-        });
-      } catch (err) {
-        console.error(err);
-      }
-    };
 
-    fetchFormations();
-  }, []);
-
-  useEffect(() => {
-    if (selectedOption) {
-      const elemento = courseName.filter(
-        (ele) => ele.nombre === selectedOption
-      );
-
-      setCursoId(elemento[0]._id);
-    }
-  }, [selectedOption]);
-
-  const handleRegister = async () => {
-    try {
-      const userCredential = await createUserWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
-      const user = userCredential.user;
-
-      if (user) {
-        registerRequest({
-          success: (v) => {
-            AsyncStorage.setItem('Token', v.payload.token), setName('');
-            setEmail('');
-            setPassword('');
-            dispatch(setFormaciones(v.payload.user.formacion));
-            dispatch(setModulos(v.payload.user.formacion.modulos));
-            dispatch(setUsers(v.payload.user));
-            navigation.navigate('LoginScreen');
-          },
-          error: (e) => console.log(e),
-          loading: (l) => console.log('cargando', l),
-          email,
-          name,
-          cursoId
-        });
-      }
-    } catch (error) {
-      Alert.alert(error.code, error.message);
-    }
+  const navigateToHome = () => {
+    navigation.navigate('Main');
   };
+
+  const handleRegister = async () => {};
 
   return (
     <View className='flex flex-col items-center w-full'>
@@ -110,11 +40,13 @@ const RegisterComponent = ({ title, subTitle }) => {
         <View className='w-[358px] items-center mt-2'>
           <View className=' h-[40px] mt-3 justify-center items-start'>
             <Text className='text-center text-teal-900 text-2xl font-bold'>
-              {title}
+              Registrate
             </Text>
           </View>
           <View className=' h-[65px] justify-center items-start'>
-            <Text className='text-gray-500 text-sm'>{subTitle}</Text>
+            <Text className='text-gray-500 text-sm'>
+              Comienza hoy tu cuenta
+            </Text>
           </View>
 
           <View>
@@ -174,14 +106,14 @@ const RegisterComponent = ({ title, subTitle }) => {
               O registrate con
             </Text>
             <View className='flex flex-row mt-2'>
-              <TouchableOpacity className='items-center justify-center border rounded-full w-[50px] h-[50px] border-gray-300 bg-gray-200 mx-2'>
-                <GoogleSVG />
+              <TouchableOpacity className='items-center justify-center w-[50px] h-[50px]  mx-3'>
+                <Image source={Apple} className='w-11 h-11' />
               </TouchableOpacity>
-              <TouchableOpacity className='items-center justify-center border rounded-full w-[50px] h-[50px] border-gray-300 bg-gray-200 mx-2'>
-                <AppleSVG />
+              <TouchableOpacity className='items-center justify-center w-[50px] h-[50px]  mx-3'>
+                <Image source={Google} className='w-11 h-11' />
               </TouchableOpacity>
-              <TouchableOpacity className='items-center justify-center border rounded-full w-[50px] h-[50px] border-gray-300 bg-gray-200 mx-2'>
-                <FacebookSVG />
+              <TouchableOpacity className='items-center justify-center w-[50px] h-[50px]  mx-3'>
+                <Image source={Facebook} className='w-11 h-11' />
               </TouchableOpacity>
             </View>
           </View>
