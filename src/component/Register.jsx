@@ -125,7 +125,7 @@ const RegisterComponent = ({ title, subTitle }) => {
               Al registrarte aceptas nuestros
             </Text>
             <TouchableOpacity>
-              <Text className='border-teal-900 text-x underline'>
+              <Text className='border-black text-x underline'>
                 terminos y condiciones de uso
               </Text>
             </TouchableOpacity>
