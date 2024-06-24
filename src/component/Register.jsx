@@ -12,8 +12,9 @@ import Facebook from '../../assets/Facebook.png';
 import Google from '../../assets/Google.png';
 import { useNavigation } from '@react-navigation/native';
 
-const RegisterComponent = ({ title, subTitle }) => {
+const RegisterComponent = () => {
   const [name, setName] = useState('');
+  const [afliado, setAfliado] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [selectedOption, setSlectedOption] = useState();
@@ -30,15 +31,13 @@ const RegisterComponent = ({ title, subTitle }) => {
   const handleRegister = async () => {};
 
   return (
-    <View className='flex-1 flex-col mt-10 w-full h-full bg-gray-200'>
+    <View className='flex-1 flex-col mt-8 w-full h-full bg-gray-200'>
       <View className=''>
-        <Text className='text-center text-black text-2xl font-bold mt-3'>
-          Registro
-        </Text>
+        <Text className='text-center text-black text-2xl font-bold mt-3'></Text>
       </View>
 
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-        <View className='items-center mt-20 w-full h-full'>
+        <View className='items-center mt-10 w-full h-full'>
           <View className=''>
             <Text className='text-center text-black text-2xl font-bold'>
               Registrate
@@ -49,19 +48,33 @@ const RegisterComponent = ({ title, subTitle }) => {
               Comienza hoy tu cuenta
             </Text>
           </View>
-          <View className='mt-10'>
+          <View className='mt-5'>
             <Text className='text-black text-base font-semibold'>Nombre</Text>
             <TextInput
               className='w-80 h-10 mt-2 border border-black rounded-lg px-2 font-semibold'
               placeholder='Ingresa tu nombre'
               value={name}
               onChangeText={setName}
-              keyboardType='name'
+              keyboardType='default'
               autoCapitalize='none'
             />
           </View>
 
-          <View className=' mt-4'>
+          <View className='mt-3'>
+            <Text className='text-black text-base font-semibold'>
+              Numero de Afiliado
+            </Text>
+            <TextInput
+              className='w-80 h-10 mt-2 border border-black rounded-lg px-2 font-semibold'
+              placeholder='Ingresa tu número de afiliado'
+              value={afliado}
+              onChangeText={setAfliado}
+              keyboardType='numeric'
+              autoCapitalize='none'
+            />
+          </View>
+
+          <View className='mt-3'>
             <Text className='text-black text-base font-semibold'>Email</Text>
             <TextInput
               className='w-80 h-10 mt-2 border border-black rounded-lg px-2 font-semibold'
@@ -73,7 +86,7 @@ const RegisterComponent = ({ title, subTitle }) => {
             />
           </View>
 
-          <View className='top-4'>
+          <View className='top-3'>
             <Text className='text-black text-base font-semibold'>
               Contraseña
             </Text>
@@ -97,13 +110,13 @@ const RegisterComponent = ({ title, subTitle }) => {
               ¿Ya tienes cuenta?
             </Text>
             <TouchableOpacity onPress={navigateToLogin}>
-              <Text className='border-teal-900 text-xs font-semibold underline ml-1'>
+              <Text className='text-xs font-semibold underline ml-1'>
                 Ingresa
               </Text>
             </TouchableOpacity>
           </View>
 
-          <View className='mt-12 flex flex-col items-center'>
+          <View className='mt-10 flex flex-col items-center'>
             <Text className='text-[#6C6C6C] text-xs font-semibold mb-2'>
               O registrate con
             </Text>
@@ -120,7 +133,7 @@ const RegisterComponent = ({ title, subTitle }) => {
             </View>
           </View>
 
-          <View className=' items-center justify-center top-14 flex flex-col'>
+          <View className=' items-center justify-center mt-10 flex flex-col'>
             <Text className='text-[#6C6C6C] text-x'>
               Al registrarte aceptas nuestros
             </Text>
