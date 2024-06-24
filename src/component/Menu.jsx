@@ -8,10 +8,17 @@ import Factura from '../../assets/Factura.png';
 import Preguntas from '../../assets/Preguntas.png';
 import Informacion from '../../assets/Informacion.png';
 import Configuracion from '../../assets/Configuracion.png';
+import { useNavigation } from '@react-navigation/native';
 
 const Menu = ({ isOpen, toggleMenu }) => {
+  const navigation = useNavigation();
   const { height } = Dimensions.get('window');
   const marginTopClass = height >= 949 ? 'mt-32' : 'mt-11';
+
+  GoOut = () => {
+    navigation.navigate('Login');
+  };
+
   return (
     <View className='flex-row'>
       <View className='h-full w-64 border bg-gray-200'>
@@ -81,7 +88,7 @@ const Menu = ({ isOpen, toggleMenu }) => {
                   <Text className='text-lg font-bold'>Salir</Text>
                 </View>
                 <View>
-                  <TouchableOpacity>
+                  <TouchableOpacity onPress={GoOut}>
                     <Image source={Apagar} className='w-10 w h-10' />
                   </TouchableOpacity>
                 </View>
