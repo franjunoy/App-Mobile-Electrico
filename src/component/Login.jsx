@@ -36,13 +36,11 @@ const LoginComponent = () => {
   return (
     <View className='flex-1 flex-col mt-10 w-full h-full bg-gray-200'>
       <View className=''>
-        <Text className='text-center text-black text-2xl font-bold mt-3'>
-          Iniciar sesión
-        </Text>
+        <Text className='text-center text-black text-2xl font-bold mt-3'></Text>
       </View>
 
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-        <View className='items-center mt-20 w-full h-full'>
+        <View className='items-center mt-8 w-full h-full'>
           <View className=''>
             <Text className='text-center text-black text-2xl font-bold'>
               Bienvenido de nuevo! 👋
@@ -103,7 +101,7 @@ const LoginComponent = () => {
               ¿Aún no tienes cuenta?
             </Text>
             <TouchableOpacity onPress={navigateToRegister}>
-              <Text className='border-black text-xs font-semibold underline ml-1'>
+              <Text className='text-xs font-semibold underline ml-1'>
                 Regístrate
               </Text>
             </TouchableOpacity>
