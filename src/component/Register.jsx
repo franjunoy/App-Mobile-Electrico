@@ -4,7 +4,8 @@ import {
   Text,
   TextInput,
   TouchableOpacity,
-  ScrollView
+  ScrollView,
+  Image
 } from 'react-native';
 import Apple from '../../assets/Apple.png';
 import Facebook from '../../assets/Facebook.png';
@@ -22,13 +23,17 @@ const RegisterComponent = ({ title, subTitle }) => {
     navigation.navigate('Main');
   };
 
+  navigateToLogin = () => {
+    navigation.navigate('Login');
+  };
+
   const handleRegister = async () => {};
 
   return (
     <View className='flex-1 flex-col mt-10 w-full h-full bg-gray-200'>
       <View className=''>
         <Text className='text-center text-black text-2xl font-bold mt-3'>
-          Registrate
+          Registro
         </Text>
       </View>
 
@@ -83,11 +88,22 @@ const RegisterComponent = ({ title, subTitle }) => {
 
           <View className=' w-52 h-12 mt-12 justify-center items-center border rounded-lg bg-electric-yellow'>
             <TouchableOpacity onPress={navigateToHome}>
-              <Text className='text-xl font-bold'>Ingresar</Text>
+              <Text className='text-xl font-bold'>Crear Cuenta</Text>
             </TouchableOpacity>
           </View>
 
-          <View className='mt-16 flex flex-col items-center'>
+          <View className='w-[270px] h-[22px] mt-2 flex flex-row justify-center items-center'>
+            <Text className='text-[#6C6C6C] text-xs font-semibold'>
+              ¿Ya tienes cuenta?
+            </Text>
+            <TouchableOpacity onPress={navigateToLogin}>
+              <Text className='border-teal-900 text-xs font-semibold underline ml-1'>
+                Ingresa
+              </Text>
+            </TouchableOpacity>
+          </View>
+
+          <View className='mt-12 flex flex-col items-center'>
             <Text className='text-[#6C6C6C] text-xs font-semibold mb-2'>
               O registrate con
             </Text>
