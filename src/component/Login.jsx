@@ -103,7 +103,7 @@ const LoginComponent = () => {
               ¿Aún no tienes cuenta?
             </Text>
             <TouchableOpacity onPress={navigateToRegister}>
-              <Text className='border-teal-900 text-xs font-semibold underline ml-1'>
+              <Text className='border-black text-xs font-semibold underline ml-1'>
                 Regístrate
               </Text>
             </TouchableOpacity>
