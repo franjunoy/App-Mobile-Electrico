@@ -1,10 +1,14 @@
+import JuanPerez from '../../assets/JuanPerez.png';
+import MariaGomez from '../../assets/MariaGomez.png';
+import CarlosLopez from '../../assets/CarlosLopez.png';
+
 export const userAccounts = [
   {
     nombre: 'Juan Pérez',
     email: 'juan.perez@hotmail.com',
     numeroAfiliado: '123456',
     contraseña: 'password123',
-    foto: '',
+    foto: JuanPerez,
     domicilio: '123 Calle Falsa, Rosario, Santa Fe, Argentina',
     tarjetas: ['Visa 1234', 'Mastercard 5678'],
     facturasElectronicas: [
@@ -41,7 +45,7 @@ export const userAccounts = [
     email: 'maria.gomez@hotmail.com',
     numeroAfiliado: '654321',
     contraseña: 'password456',
-    foto: '',
+    foto: MariaGomez,
     domicilio: '456 Calle Verdadera, Rosario, Santa Fe, Argentina',
     tarjetas: ['Visa 8765', 'Mastercard 4321'],
     facturasElectronicas: [
@@ -78,7 +82,7 @@ export const userAccounts = [
     email: 'carlos.lopez@gmail.com',
     numeroAfiliado: '789012',
     contraseña: 'password789',
-    foto: '',
+    foto: CarlosLopez,
     domicilio: '789 Calle Real, Rosario, Santa Fe, Argentina',
     tarjetas: ['Visa 5678', 'Mastercard 1234'],
     facturasElectronicas: [
