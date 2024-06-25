@@ -41,7 +41,7 @@ export const userAccounts = [
     email: 'maria.gomez@hotmail.com',
     numeroAfiliado: '654321',
     contraseña: 'password456',
-    foto: 'https://example.com/foto2.jpg',
+    foto: '',
     domicilio: '456 Calle Verdadera, Rosario, Santa Fe, Argentina',
     tarjetas: ['Visa 8765', 'Mastercard 4321'],
     facturasElectronicas: [
@@ -82,19 +82,19 @@ export const userAccounts = [
     domicilio: '789 Calle Real, Rosario, Santa Fe, Argentina',
     tarjetas: ['Visa 5678', 'Mastercard 1234'],
     facturasElectronicas: [
-      { descripcion: 'Factura Enero', monto: 100 },
-      { descripcion: 'Factura Febrero', monto: 150 },
-      { descripcion: 'Factura Marzo', monto: 170 },
-      { descripcion: 'Factura Abril', monto: 180 },
-      { descripcion: 'Factura Mayo', monto: 210 },
-      { descripcion: 'Factura Junio', monto: 250 }
+      { descripcion: 'Factura Enero', monto: 800 },
+      { descripcion: 'Factura Febrero', monto: 810 },
+      { descripcion: 'Factura Marzo', monto: 790 },
+      { descripcion: 'Factura Abril', monto: 850 },
+      { descripcion: 'Factura Mayo', monto: 800 },
+      { descripcion: 'Factura Junio', monto: 810 }
     ],
     misPagos: [
-      { descripcion: 'Mes Enero', monto: 100 },
-      { descripcion: 'Mes Febrero', monto: 150 },
-      { descripcion: 'Mes Marzo', monto: 170 },
-      { descripcion: 'Mes Abril', monto: 180 },
-      { descripcion: 'Mes Mayo', monto: 210 }
+      { descripcion: 'Mes Enero', monto: 800 },
+      { descripcion: 'Mes Febrero', monto: 810 },
+      { descripcion: 'Mes Marzo', monto: 790 },
+      { descripcion: 'Mes Abril', monto: 850 },
+      { descripcion: 'Mes Mayo', monto: 800 }
     ],
     misConsumos: [
       { descripcion: 'Enero', consumo: 300 },
