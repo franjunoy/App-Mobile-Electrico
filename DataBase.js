@@ -1,6 +1,6 @@
-import JuanPerez from '../../assets/JuanPerez.png';
-import MariaGomez from '../../assets/MariaGomez.png';
-import CarlosLopez from '../../assets/CarlosLopez.png';
+import JuanPerez from './assets/JuanPerez.png';
+import MariaGomez from './assets/MariaGomez.png';
+import CarlosLopez from './assets/CarlosLopez.png';
 
 export const userAccounts = [
   {
