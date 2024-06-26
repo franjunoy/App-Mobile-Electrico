@@ -15,9 +15,16 @@ import Google from '../../assets/Google.png';
 
 const LoginComponent = () => {
   const navigation = useNavigation();
-  const [email, setEmail] = useState('');
+  const [selectedOption, setSelectedOption] = useState('');
   const [password, setPassword] = useState('');
   const [isChecked, setIsChecked] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const options = [
+    'email1@example.com',
+    'email2@example.com',
+    'email3@example.com'
+  ];
 
   const toggleCheckbox = () => {
     setIsChecked(!isChecked);
@@ -29,8 +36,17 @@ const LoginComponent = () => {
     navigation.navigate('Main');
   };
 
-  navigateToRegister = () => {
+  const navigateToRegister = () => {
     navigation.navigate('Register');
+  };
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleOptionClick = (option) => {
+    setSelectedOption(option);
+    setIsOpen(false);
   };
 
   return (
@@ -51,17 +67,39 @@ const LoginComponent = () => {
               Inicia sesión con tu cuenta
             </Text>
           </View>
-          <View className='mt-10'>
+
+          <View className='mt-10 w-80 relative'>
             <Text className='text-black text-base font-semibold'>Email</Text>
-            <TextInput
-              className='w-80 h-10 mt-2 border border-black rounded-lg px-2 font-semibold'
-              placeholder='Ingresa tu email'
-              value={email}
-              onChangeText={setEmail}
-              keyboardType='email-address'
-              autoCapitalize='none'
-            />
+            <TouchableOpacity
+              className='w-80 h-10 mt-2 border border-black rounded-lg px-2 font-semibold flex-row justify-between items-center'
+              onPress={toggleDropdown}
+            >
+              <Text className='text-black'>
+                {selectedOption || 'Selecciona tu email'}
+              </Text>
+              <Icon
+                name={isOpen ? 'arrow-drop-up' : 'arrow-drop-down'}
+                size={20}
+                color='#000'
+              />
+            </TouchableOpacity>
+            {isOpen && (
+              <ScrollView className='w-80 border border-black mt-20 h-24 absolute bg-white z-50'>
+                {options.map((option) => (
+                  <TouchableOpacity
+                    key={option}
+                    className={`p-2 ${
+                      selectedOption === option ? 'bg-gray-100' : 'bg-gray-100'
+                    }`}
+                    onPress={() => handleOptionClick(option)}
+                  >
+                    <Text className='text-black'>{option}</Text>
+                  </TouchableOpacity>
+                ))}
+              </ScrollView>
+            )}
           </View>
+
           <View className='mt-6'>
             <Text className='text-black text-base font-semibold'>
               Contraseña
