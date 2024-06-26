@@ -98,13 +98,11 @@ const RegisterComponent = () => {
               secureTextEntry
             />
           </View>
-
-          <View className=' w-52 h-12 mt-12 justify-center items-center border rounded-lg bg-electric-yellow'>
-            <TouchableOpacity onPress={navigateToHome}>
+          <TouchableOpacity onPress={navigateToLogin}>
+            <View className=' w-52 h-12 mt-12 justify-center items-center border rounded-lg bg-electric-yellow'>
               <Text className='text-xl font-bold'>Crear Cuenta</Text>
-            </TouchableOpacity>
-          </View>
-
+            </View>
+          </TouchableOpacity>
           <View className='w-[270px] h-[22px] mt-2 flex flex-row justify-center items-center'>
             <Text className='text-[#6C6C6C] text-xs font-semibold'>
               ¿Ya tienes cuenta?
