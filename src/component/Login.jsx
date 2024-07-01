@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
@@ -49,11 +49,16 @@ const LoginComponent = () => {
     if (selectedOption) {
       const user = DataBase.find((user) => user.email === selectedOption);
       setUser(user);
-      navigateToHome();
     } else {
-      alert('Seleccione un email');
+      Alert.alert('Seleccione un email');
     }
   };
+
+  useEffect(() => {
+    if (user) {
+      navigateToHome();
+    }
+  }, [user]);
 
   return (
     <View className='flex-1 flex-col mt-10 w-full h-full bg-gray-200'>
