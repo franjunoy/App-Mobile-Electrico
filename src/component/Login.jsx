@@ -136,11 +136,11 @@ const LoginComponent = () => {
               </TouchableOpacity>
             </View>
           </View>
-          <View className=' w-52 h-12 mt-12 justify-center items-center border rounded-lg bg-electric-yellow'>
-            <TouchableOpacity onPress={handleLogin}>
+          <TouchableOpacity onPress={handleLogin}>
+            <View className=' w-52 h-12 mt-12 justify-center items-center border rounded-lg bg-electric-yellow'>
               <Text className='text-xl font-bold'>Ingresar</Text>
-            </TouchableOpacity>
-          </View>
+            </View>
+          </TouchableOpacity>
           <View className='w-[270px] h-[22px] mt-2 flex flex-row justify-center items-center'>
             <Text className='text-[#6C6C6C] text-xs font-semibold'>
               ¿Aún no tienes cuenta?
