@@ -9,11 +9,11 @@ import Soporte from './Soporte';
 import PaginaWeb from './PaginaWeb';
 import Reader from './Reader';
 
-const Home = ({ toggleMenu }) => {
+const Home = ({ toggleMenu, user }) => {
   return (
     <View className='bg-gray-200 h-full w-full'>
       <View className='mt-10'>
-        <Header toggleMenu={toggleMenu} />
+        <Header toggleMenu={toggleMenu} user={user} />
       </View>
 
       <ScrollView>
