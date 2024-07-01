@@ -8,20 +8,23 @@ import Seguridad from '../../../assets/Seguridad.png';
 import Mapa from '../../../assets/Mapa.png';
 import Tarjeta from '../../../assets/Tarjeta.png';
 import Enviar from '../../../assets/Enviar.png';
+import { useRoute } from '@react-navigation/native';
 
 const Perfil = () => {
+  const route = useRoute();
+  const { user } = route.params;
   return (
     <View className='items-center flex-1 bg-gray-200'>
       <View className='flex flex-col p-4'>
         <View className='flex flex-row items-center mt-4 ml-16'>
-          <TouchableOpacity>
-            <View className='border rounded-full'>
-              <Image source={Persona} className=' w-32 h-32 ' />
+          <TouchableOpacity className='border rounded-full h-32 w-32 items-center justify-center'>
+            <View>
+              <Image source={user.foto} className=' w-24 h-24' />
             </View>
           </TouchableOpacity>
           <View className='items-start mt-10 ml-3'>
-            <Text className='text-xl text font-bold'>Nombre</Text>
-            <Text className='text-base text-gray-600'>Email</Text>
+            <Text className='text-xl text font-bold'>{user.nombre}</Text>
+            <Text className='text-base text-gray-600'>{user.email}</Text>
           </View>
         </View>
 
