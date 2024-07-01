@@ -2,12 +2,12 @@ import JuanPerez from './assets/JuanPerez.png';
 import MariaGomez from './assets/MariaGomez.png';
 import CarlosLopez from './assets/CarlosLopez.png';
 
-export const userAccounts = [
+export const DataBase = [
   {
     nombre: 'Juan Pérez',
     email: 'juan.perez@hotmail.com',
     numeroAfiliado: '123456',
-    contraseña: 'password123',
+    contraseña: '123',
     foto: JuanPerez,
     domicilio: '123 Calle Falsa, Rosario, Santa Fe, Argentina',
     tarjetas: ['Visa 1234', 'Mastercard 5678'],
@@ -43,7 +43,7 @@ export const userAccounts = [
   {
     nombre: 'María Gómez',
     email: 'maria.gomez@hotmail.com',
-    numeroAfiliado: '654321',
+    numeroAfiliado: '654',
     contraseña: 'password456',
     foto: MariaGomez,
     domicilio: '456 Calle Verdadera, Rosario, Santa Fe, Argentina',
@@ -80,7 +80,7 @@ export const userAccounts = [
   {
     nombre: 'Carlos López',
     email: 'carlos.lopez@gmail.com',
-    numeroAfiliado: '789012',
+    numeroAfiliado: '789',
     contraseña: 'password789',
     foto: CarlosLopez,
     domicilio: '789 Calle Real, Rosario, Santa Fe, Argentina',
