@@ -1,14 +1,22 @@
-import React from 'react';
-import { View, Text, Image, TouchableOpacity } from 'react-native';
+import React, { useEffect } from 'react';
+import { View, Image, TouchableOpacity } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import Menu from '../../assets/Menu.png';
-import Persona from '../../assets/Persona.png';
 import Logo from '../../assets/Logo.png';
 import { useNavigation } from '@react-navigation/native';
 
 const Header = ({ toggleMenu, user }) => {
   const navigation = useNavigation();
-  console.log(user);
+
+  const navigateToPerfil = () => {
+    navigation.navigate('Perfil', { user: user });
+  };
+
+  useEffect(() => {
+    if (user) {
+      navigateToPerfil();
+    }
+  }, [user]);
 
   return (
     <View className='w-full h-16 bg-electric-yellow items-center flex-row justify-between px-1'>
@@ -23,9 +31,12 @@ const Header = ({ toggleMenu, user }) => {
         </View>
       </View>
       <View>
-        <TouchableOpacity onPress={() => navigation.navigate('Perfil')}>
-          <View className='border rounded-full'>
-            <Image source={Persona} className='w-14 h-14' />
+        <TouchableOpacity
+          onPress={navigateToPerfil}
+          className='border rounded-full h-16 w-16 items-center justify-center'
+        >
+          <View>
+            <Image source={user?.foto} className='w-12 h-12' />
           </View>
         </TouchableOpacity>
       </View>
