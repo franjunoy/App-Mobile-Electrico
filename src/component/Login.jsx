@@ -12,6 +12,7 @@ import { useNavigation } from '@react-navigation/native';
 import Apple from '../../assets/Apple.png';
 import Facebook from '../../assets/Facebook.png';
 import Google from '../../assets/Google.png';
+import { DataBase } from '../../DataBase';
 
 const LoginComponent = () => {
   const navigation = useNavigation();
@@ -19,21 +20,14 @@ const LoginComponent = () => {
   const [password, setPassword] = useState('');
   const [isChecked, setIsChecked] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-
-  const options = [
-    'email1@example.com',
-    'email2@example.com',
-    'email3@example.com'
-  ];
+  const [user, setUser] = useState('');
 
   const toggleCheckbox = () => {
     setIsChecked(!isChecked);
   };
 
-  const handleLogin = () => {};
-
   const navigateToHome = () => {
-    navigation.navigate('Main');
+    navigation.navigate('Main', { user: user });
   };
 
   const navigateToRegister = () => {
@@ -45,8 +39,20 @@ const LoginComponent = () => {
   };
 
   const handleOptionClick = (option) => {
+    const user = DataBase.find((user) => user.email === option);
     setSelectedOption(option);
+    setPassword(user ? user.contraseña : '');
     setIsOpen(false);
+  };
+
+  const handleLogin = () => {
+    if (selectedOption) {
+      const user = DataBase.find((user) => user.email === selectedOption);
+      setUser(user);
+      navigateToHome();
+    } else {
+      alert('Seleccione un email');
+    }
   };
 
   return (
@@ -84,22 +90,23 @@ const LoginComponent = () => {
               />
             </TouchableOpacity>
             {isOpen && (
-              <ScrollView className='w-80 border border-black mt-20 h-24 absolute bg-white z-50'>
-                {options.map((option) => (
+              <ScrollView className='w-80 border border-black mt-20 h-28 absolute bg-white z-50'>
+                {DataBase.map((user) => (
                   <TouchableOpacity
-                    key={option}
+                    key={user.email}
                     className={`p-2 ${
-                      selectedOption === option ? 'bg-gray-100' : 'bg-gray-100'
+                      selectedOption === user.email
+                        ? 'bg-gray-100'
+                        : 'bg-gray-100'
                     }`}
-                    onPress={() => handleOptionClick(option)}
+                    onPress={() => handleOptionClick(user.email)}
                   >
-                    <Text className='text-black'>{option}</Text>
+                    <Text className='text-black'>{user.email}</Text>
                   </TouchableOpacity>
                 ))}
               </ScrollView>
             )}
           </View>
-
           <View className='mt-6'>
             <Text className='text-black text-base font-semibold'>
               Contraseña
@@ -130,7 +137,7 @@ const LoginComponent = () => {
             </View>
           </View>
           <View className=' w-52 h-12 mt-12 justify-center items-center border rounded-lg bg-electric-yellow'>
-            <TouchableOpacity onPress={navigateToHome}>
+            <TouchableOpacity onPress={handleLogin}>
               <Text className='text-xl font-bold'>Ingresar</Text>
             </TouchableOpacity>
           </View>
