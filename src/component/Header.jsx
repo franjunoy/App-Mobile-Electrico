@@ -1,13 +1,14 @@
 import React from 'react';
-import { View, Image, TouchableOpacity } from 'react-native';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import Menu from '../../assets/Menu.png';
 import Persona from '../../assets/Persona.png';
 import Logo from '../../assets/Logo.png';
 import { useNavigation } from '@react-navigation/native';
 
-const Header = ({ toggleMenu }) => {
+const Header = ({ toggleMenu, user }) => {
   const navigation = useNavigation();
+  console.log(user);
 
   return (
     <View className='w-full h-16 bg-electric-yellow items-center flex-row justify-between px-1'>
