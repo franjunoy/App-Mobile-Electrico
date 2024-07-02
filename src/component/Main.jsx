@@ -38,7 +38,7 @@ const Main = () => {
     <View className='flex-1'>
       <Home toggleMenu={toggleMenu} user={user} />
       <Animated.View className='absolute top-10' style={[menuStyle]}>
-        <Menu isOpen={isOpen} toggleMenu={toggleMenu} />
+        <Menu isOpen={isOpen} toggleMenu={toggleMenu} user={user} />
       </Animated.View>
     </View>
   );
