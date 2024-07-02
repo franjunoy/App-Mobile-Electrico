@@ -5,11 +5,14 @@ import { useNavigation } from '@react-navigation/native';
 
 const MisConsumos = (user) => {
   const navigation = useNavigation();
+  const navigateToConsumos = () => {
+    navigation.navigate('MisConsumos', { user: user });
+  };
 
   return (
     <View className='w-full h-36 items-center justify-center'>
       <TouchableOpacity
-        onPress={() => navigation.navigate('MisConsumos')}
+        onPress={navigateToConsumos}
         className='w-64 h-28 border p-2 bg-electric-yellow rounded-lg items-center'
       >
         <View>
