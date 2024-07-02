@@ -26,11 +26,11 @@ const Home = ({ toggleMenu, user }) => {
         </View>
 
         <View>
-          <MisConsumos />
+          <MisConsumos user={user} />
         </View>
 
         <View>
-          <FacturaElectronica />
+          <FacturaElectronica user={user} />
         </View>
         <View className='flex-row w-full h-36 items-center justify-between px-8'>
           <SimuladorDeConsumo />
