@@ -15,6 +15,10 @@ const Menu = ({ isOpen, toggleMenu, user }) => {
   const { height } = Dimensions.get('window');
   const marginTopClass = height >= 949 ? 'mt-32' : 'mt-11';
 
+  const navigateToHome = () => {
+    navigation.navigate('Home');
+  };
+
   const navigateToMisPagos = () => {
     navigation.navigate('MisPagos', { user: user });
   };
