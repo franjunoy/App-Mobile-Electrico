@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { View, Image, TouchableOpacity } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import Menu from '../../assets/Menu.png';
@@ -11,12 +11,6 @@ const Header = ({ toggleMenu, user }) => {
   const navigateToPerfil = () => {
     navigation.navigate('Perfil', { user: user });
   };
-
-  useEffect(() => {
-    if (user) {
-      navigateToPerfil();
-    }
-  }, [user]);
 
   return (
     <View className='w-full h-16 bg-electric-yellow items-center flex-row justify-between px-1'>
