@@ -18,7 +18,7 @@ const Home = ({ toggleMenu, user }) => {
 
       <ScrollView>
         <View>
-          <Notificaciones />
+          <Notificaciones user={user} />
         </View>
 
         <View>
