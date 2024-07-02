@@ -3,7 +3,7 @@ import { View, Text, Image, TouchableOpacity } from 'react-native';
 import Consumo from '../../assets/Consumo.png';
 import { useNavigation } from '@react-navigation/native';
 
-const MisConsumos = () => {
+const MisConsumos = (user) => {
   const navigation = useNavigation();
 
   return (
