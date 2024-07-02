@@ -10,10 +10,14 @@ import Informacion from '../../assets/Informacion.png';
 import Configuracion from '../../assets/Configuracion.png';
 import { useNavigation } from '@react-navigation/native';
 
-const Menu = ({ isOpen, toggleMenu }) => {
+const Menu = ({ isOpen, toggleMenu, user }) => {
   const navigation = useNavigation();
   const { height } = Dimensions.get('window');
   const marginTopClass = height >= 949 ? 'mt-32' : 'mt-11';
+
+  const navigateToMisPagos = () => {
+    navigation.navigate('MisPagos', { user: user });
+  };
 
   GoOut = () => {
     navigation.navigate('Login');
@@ -46,7 +50,10 @@ const Menu = ({ isOpen, toggleMenu }) => {
                   </TouchableOpacity>
                 </View>
                 <View className='mt-4'>
-                  <TouchableOpacity className='flex-row items-center justify-between p-1'>
+                  <TouchableOpacity
+                    onPress={navigateToMisPagos}
+                    className='flex-row items-center justify-between p-1'
+                  >
                     <Text className='text-xl font-bold'>Mis Pagos</Text>
                     <Image source={Pagos} className='w-9 w h-9' />
                   </TouchableOpacity>
