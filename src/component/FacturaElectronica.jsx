@@ -3,12 +3,16 @@ import { View, Text, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import Factura from '../../assets/Factura.png';
 
-const FacturaElectronica = () => {
+const FacturaElectronica = (user) => {
   const navigation = useNavigation();
+  const navigateToFactura = () => {
+    navigation.navigate('PagarFactura', { user: user });
+  };
+
   return (
     <View className='w-full h-36 items-center justify-center'>
       <TouchableOpacity
-        onPress={() => navigation.navigate('PagarFactura')}
+        onPress={navigateToFactura}
         className='w-64 h-28 border p-2 bg-electric-yellow rounded-lg items-center'
       >
         <View>
