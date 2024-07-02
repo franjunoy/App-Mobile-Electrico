@@ -27,7 +27,7 @@ const Header = ({ toggleMenu, user }) => {
       <View>
         <TouchableOpacity
           onPress={navigateToPerfil}
-          className='border rounded-full h-16 w-16 items-center justify-center'
+          className='border rounded-full h-16 w-16 items-center justify-center bg-neutral-100'
         >
           <View>
             <Image source={user?.foto} className='w-12 h-12' />
